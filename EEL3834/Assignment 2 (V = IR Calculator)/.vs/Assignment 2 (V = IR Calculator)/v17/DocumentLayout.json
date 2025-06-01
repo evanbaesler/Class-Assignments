@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ebaes\\Documents\\GitHub\\Class-Assignments\\EEL3834\\Assignment 2 (V = IR Calculator)\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2C1D2466-6471-4A4A-AF6C-945BA1EA1A40}|evan_baesler_assignment2\\evan_baesler_assignment2.vcxproj|C:\\Users\\ebaes\\Documents\\GitHub\\Class-Assignments\\EEL3834\\Assignment 2 (V = IR Calculator)\\evan_baesler_assignment2\\evan_baesler_assignment2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2C1D2466-6471-4A4A-AF6C-945BA1EA1A40}|evan_baesler_assignment2\\evan_baesler_assignment2.vcxproj|solutionrelative:evan_baesler_assignment2\\evan_baesler_assignment2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "evan_baesler_assignment2.cpp",
+              "DocumentMoniker": "C:\\Users\\ebaes\\Documents\\GitHub\\Class-Assignments\\EEL3834\\Assignment 2 (V = IR Calculator)\\evan_baesler_assignment2\\evan_baesler_assignment2.cpp",
+              "RelativeDocumentMoniker": "evan_baesler_assignment2\\evan_baesler_assignment2.cpp",
+              "ToolTip": "C:\\Users\\ebaes\\Documents\\GitHub\\Class-Assignments\\EEL3834\\Assignment 2 (V = IR Calculator)\\evan_baesler_assignment2\\evan_baesler_assignment2.cpp",
+              "RelativeToolTip": "evan_baesler_assignment2\\evan_baesler_assignment2.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-01T23:23:42.667Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

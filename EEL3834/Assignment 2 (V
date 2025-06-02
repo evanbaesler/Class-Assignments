@@ -1,3 +1,3 @@
 ﻿  evan_baesler_assignment2.cpp
-C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3834\Assignment 2 (V = IR Calculator)\evan_baesler_assignment2\evan_baesler_assignment2.cpp(20,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  evan_baesler_assignment2.vcxproj -> C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3834\Assignment 2 (V = IR Calculator)\x64\Debug\evan_baesler_assignment2.exe
+C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3834\Assignment 2 (V = IR Calculator)\C++\evan_baesler_assignment2\evan_baesler_assignment2.cpp(23,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  evan_baesler_assignment2.vcxproj -> C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3834\Assignment 2 (V = IR Calculator)\C++\x64\Debug\evan_baesler_assignment2.exe

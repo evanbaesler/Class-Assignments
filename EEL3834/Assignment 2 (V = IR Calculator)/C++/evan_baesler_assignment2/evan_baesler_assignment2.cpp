@@ -28,15 +28,15 @@ int sigFigCalculator(string input) {
 
 int main() {
     
-    string loopInput;
-    bool exitLoop;
-    int loopCheck = 1;
+    string loopInput; // Used at the end for our exit loop to read our input
+    bool exitLoop; // Used to see if the end loop needs to continue or not
+    int loopCheck = 1; // Used to loop the main function until broken
     cout << "Welcome to the Ohm's Law Calculator!";
 
     while (loopCheck == 1) {
 
         bool loop; // Used to loop through the calculation process until two proper inputs are given.
-        int formulaTrack = 0; // Used to determine which version of V = IR to use depending on variable being requested.
+        double formulaTrack = 0; // Used to determine which version of V = IR to use depending on variable being requested.
         string inputOne; // First input, stored as a string to determine string length accurately without additional zeroes being added from string to double.
         string inputTwo; // Second input, stored as a string to determine string length accurately without additional zeroes being added from string to double.
         double inputOneCalculation = 0.0; // stod(inputOne);
@@ -55,7 +55,7 @@ int main() {
         cin >> formulaTrack;
 
         // This if statement makes sure our choice reflects our options, and if a letter is given it checks for a input failure, clearing the error and repeats the loop using continue.
-        if (formulaTrack != 1 || formulaTrack != 2 || formulaTrack != 3 || formulaTrack != 4 || cin.fail()) {
+        if (formulaTrack != 1 && formulaTrack != 2 && formulaTrack != 3 && formulaTrack != 4 || cin.fail()) {
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cout << endl << "Error! Please choose a number between 1 and 4: \n";
@@ -84,7 +84,7 @@ int main() {
                 }
 
                 // After converting our string to a double, if the double is negative we give an error.
-                if (inputOneCalculation < 0 || inputTwoCalculation < 0) {
+                if (inputOneCalculation <= 0 || inputTwoCalculation <= 0) {
                     cout << endl << endl << "Error! Please reinput your two numbers: \n";
                 }
 
@@ -129,7 +129,7 @@ int main() {
                 }
 
                 // After converting our string to a double, if the double is negative we give an error.
-                if (inputOneCalculation < 0 || inputTwoCalculation < 0) {
+                if (inputOneCalculation <= 0 || inputTwoCalculation <= 0) {
                     cout << endl << endl << "Error! Please reinput your two numbers: \n";
                 }
 
@@ -174,7 +174,7 @@ int main() {
                 }
 
                 // After converting our string to a double, if the double is negative we give an error.
-                if (inputOneCalculation < 0 || inputTwoCalculation < 0) {
+                if (inputOneCalculation <= 0 || inputTwoCalculation <= 0) {
                     cout << endl << endl << "Error! Please reinput your two numbers: \n";
                 }
 

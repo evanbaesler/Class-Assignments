@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Mariachi\\Documents\\GitHub\\Class-Assignments\\EEL3834\\Assignment 2 (V = IR Calculator)\\C\u002B\u002B\\",
+  "WorkspaceRootPath": "C:\\Users\\ebaes\\Documents\\GitHub\\Class-Assignments\\EEL3834\\Assignment 2 (V = IR Calculator)\\C\u002B\u002B\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2C1D2466-6471-4A4A-AF6C-945BA1EA1A40}|evan_baesler_assignment2\\evan_baesler_assignment2.vcxproj|C:\\Users\\Mariachi\\Documents\\GitHub\\Class-Assignments\\EEL3834\\Assignment 2 (V = IR Calculator)\\C\u002B\u002B\\evan_baesler_assignment2\\evan_baesler_assignment2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{2C1D2466-6471-4A4A-AF6C-945BA1EA1A40}|evan_baesler_assignment2\\evan_baesler_assignment2.vcxproj|C:\\Users\\ebaes\\Documents\\GitHub\\Class-Assignments\\EEL3834\\Assignment 2 (V = IR Calculator)\\C\u002B\u002B\\evan_baesler_assignment2\\evan_baesler_assignment2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2C1D2466-6471-4A4A-AF6C-945BA1EA1A40}|evan_baesler_assignment2\\evan_baesler_assignment2.vcxproj|solutionrelative:evan_baesler_assignment2\\evan_baesler_assignment2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
@@ -23,9 +23,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "evan_baesler_assignment2.cpp",
-              "DocumentMoniker": "C:\\Users\\Mariachi\\Documents\\GitHub\\Class-Assignments\\EEL3834\\Assignment 2 (V = IR Calculator)\\C\u002B\u002B\\evan_baesler_assignment2\\evan_baesler_assignment2.cpp",
+              "DocumentMoniker": "C:\\Users\\ebaes\\Documents\\GitHub\\Class-Assignments\\EEL3834\\Assignment 2 (V = IR Calculator)\\C\u002B\u002B\\evan_baesler_assignment2\\evan_baesler_assignment2.cpp",
               "RelativeDocumentMoniker": "evan_baesler_assignment2\\evan_baesler_assignment2.cpp",
-              "ToolTip": "C:\\Users\\Mariachi\\Documents\\GitHub\\Class-Assignments\\EEL3834\\Assignment 2 (V = IR Calculator)\\C\u002B\u002B\\evan_baesler_assignment2\\evan_baesler_assignment2.cpp",
+              "ToolTip": "C:\\Users\\ebaes\\Documents\\GitHub\\Class-Assignments\\EEL3834\\Assignment 2 (V = IR Calculator)\\C\u002B\u002B\\evan_baesler_assignment2\\evan_baesler_assignment2.cpp",
               "RelativeToolTip": "evan_baesler_assignment2\\evan_baesler_assignment2.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -42,8 +42,7 @@
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\include\\string",
               "ViewState": "AgIAAMEAAAAAAAAAAAAUwOMAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-06-02T01:16:05.206Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T01:16:05.206Z"
             }
           ]
         }

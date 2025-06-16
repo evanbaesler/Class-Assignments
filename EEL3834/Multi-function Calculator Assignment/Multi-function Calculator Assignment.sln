@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36121.58 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "evan-thomas-reese_multi-function calculator", "evan-thomas-reese_multi-function calculator\evan-thomas-reese_multi-function calculator.pyproj", "{7CB7DF66-7833-48A3-9071-47FC142A5344}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7CB7DF66-7833-48A3-9071-47FC142A5344}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CB7DF66-7833-48A3-9071-47FC142A5344}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {358210BD-CBBF-43FB-BCAE-FB7401B9D793}
+	EndGlobalSection
+EndGlobal

@@ -27,61 +27,54 @@ for count = 1:N
 end
 
 % Part 2 -
-% Provide the MatLab code for the time vector, "t" that will be used in 
-% the Fourier synthesis equation. This will be held as a vector and used 
-% to build your sinusoid components.
+% Provide the MatLab code for the time vector, "t" that will be used in the Fourier synthesis equation. 
+% This will be held as a vector and used to build your sinusoid components.
 
 fs = 80; % Given by prompt.
 dt = 1/fs; % Sampling rate is 1/fs
 t = 0:dt:1-dt; % Time is set to give 80 samples within a 1 second period.
 
 % Part 3 - 
-% Create another for loop that will loop through the ak fourier 
-% coefficients which will create each sinusoidal component Xk(t). 
-% These sinusoidal components will be held in a Matrix, M(K, N), 
-% where k is the number of fourier coefficients and N is the length of 
-% the signal.
+% Create another for loop that will loop through the ak fourier coefficients which will create each sinusoidal
+% component Xk(t). 
+% These sinusoidal components will be held in a Matrix, M(K, N), where k is the number of
+% fourier coefficients and N is the length of the signal.
 
 N = length(t); % Makes N a 1x80 array
 K = 19; % We have 19 data points. (-9 to 9)
 M = zeros(K,N); % Makes an array of 19x80 (19 waves, 80 data points)
-f0 = 4; % Fundamental frequency for 4 Hz steps
+f0 = 4; % Fundamental 
 
 for I = 1:19
-    % Finds ak by finding equivalent phasor stored
-    ak = Phasor(I); 
-    % Finds real values of each point in our wave
-    M(I, :) = real(ak * exp(1j * 2 * pi * I * f0 * t)); 
+    ak = Phasor(I);
+    M(I, :) = real(ak * exp(1j * 2 * pi * I * f0 * t));
 end
 
 % Part 4 - 
 % Provide the code for how the Fourier synthesis will be implemented.
 
-% Sums all waves together
 netWave = sum(M,1);
+
 
 figure;
 plot(t, netWave)
 
 % Part 5 - 
-% Plot 3 rows of the Matrix that are tied to an ak. Describe the signals 
-% for each plot and its relationship to the components of a sinusoidal wave.
+% Plot 3 rows of the Matrix that are tied to an ak. Describe the signals for each plot and its relationship to the
+%components of a sinusoidal wave.
 
-% Plots wave a_-9
 figure;
 plot(t, M(1,:));
 title('a_-9 component')
 xlabel('Time (s)')
 ylabel('Amplitude')
 
-% Plots wave a_0
 figure;
 plot(t, M(10,:));
 title('a_0 component')
 xlabel('Time (s)')
 ylabel('Amplitude')
 
-% Plots wave a_9
 figure;
 plot(t, M(19,:));
 title('a_9 component')
@@ -89,14 +82,13 @@ xlabel('Time (s)')
 ylabel('Amplitude')
 
 % Part 6 -
-% Add the Matrix rows to then construct the X(t)Sum signal, using the 
-% matlab function "sum”. X_t_sum
+% Add the Matrix rows to then construct the X(t)Sum signal, using the matlab function "sum”.
+% X_t_sum
 
 X_t_sum = sum(M, 1);
 
 % Part 7 - 
-% What is the DC offset of the synthesized signal and how does this relate 
-% to the fourier coefficients?
+% What is the DC offset of the synthesized signal and how does this relate to the fourier coefficients?
 
 % a_0 is our phasor at 0 Hz which is our DC offset (real component):
 DC_offset = real(Phasor(10))
@@ -104,8 +96,8 @@ DC_offset = real(Phasor(10))
 % DC_offset = +5V
 
 % Part 8 - 
-% Provide a plot of the synthesized signal. Use the grid on feature on 
-% the plot and describe what the graph represents.
+% Provide a plot of the synthesized signal. Use the grid on feature on the plot and describe what the graph
+%represents.
 
 figure;
 plot(t, X_t_sum);

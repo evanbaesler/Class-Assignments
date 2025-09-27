@@ -1,12 +1,7 @@
-t = 0:1/1000:2
+W1 = 3*exp(i*-1*pi);
+W2 = 1*exp(i*pi);
+W3 = 0;
 
-x_1 = 4*cos(20*pi*t+3*pi/4)
-x_2 = 6*cos(20*pi*t-pi/2)
-
-figure;
-hold on;
-plot(t,x_1);
-plot(t,x_2);
-plot(t,x_1+x_2);
-plot(t,10*cos(20*pi*t));
-legend;
+W4 = W1 + W2 + W3
+abs(W4)
+angle(W4)

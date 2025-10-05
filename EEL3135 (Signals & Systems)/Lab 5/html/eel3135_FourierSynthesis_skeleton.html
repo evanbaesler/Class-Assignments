@@ -1,0 +1,899 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      -->
+<title>eel3135_FourierSynthesis_skeleton</title>
+<meta name="generator" content="MATLAB 25.1">
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+<meta name="DC.date" content="2025-10-04">
+<meta name="DC.source" content="eel3135_FourierSynthesis_skeleton.m">
+<style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; }
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+span.typesection { color:#A0522D }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style>
+</head>
+<body>
+<div class="content">
+<h2>Contents</h2>
+<div>
+<ul>
+<li>
+<a href="#1">PREAMBLE</a>
+</li>
+<li>
+<a href="#2">QUESTION 1: COMMENTING</a>
+</li>
+<li>
+<a href="#3">QUESTION 2</a>
+</li>
+<li>
+<a href="#4">2(a) PLOT FIRST FOUR PERIODS</a>
+</li>
+<li>
+<a href="#5">2(b) CREATE AND SUBMIT .WAV FILE</a>
+</li>
+<li>
+<a href="#6">2(b) CREATE AND SUBMIT .WAV FILE</a>
+</li>
+<li>
+<a href="#7">2(c) PLOT FIRST FOUR PERIODS</a>
+</li>
+<li>
+<a href="#8">2(d) PLOT FIRST FOUR PERIODS</a>
+</li>
+<li>
+<a href="#9">QUESTION 3</a>
+</li>
+<li>
+<a href="#10">3(a) CREATE SOUND</a>
+</li>
+<li>
+<a href="#11">3(b) MODIFY FUNCTION (key_to_note_trumpet function is at end of file)</a>
+</li>
+<li>
+<a href="#12">3(c) CREATE SOUND (build_song_trumpet function is at end of file)</a>
+</li>
+<li>
+<a href="#13">3(d) CREATE SOUND (build_song_time function is at end of file)</a>
+</li>
+<li>
+<a href="#14">3(e) PLOT COMPARISONS</a>
+</li>
+<li>
+<a href="#15">3(f) ANSWER QUESTION</a>
+</li>
+</ul>
+</div>
+<h2 id="1">PREAMBLE</h2>
+<p>DO NOT REMOVE THE LINE BELOW</p>
+<pre class="codeinput">clear;
+close <span class="string">all</span>;
+</pre>
+<h2 id="2">QUESTION 1: COMMENTING</h2>
+<p>=========================</p>
+<pre class="codeinput">type(<span class="string">'eel3135_lab_FourierSynthesis_comment.m'</span>)
+</pre>
+<pre class="codeoutput">
+%% ACKNOWLEDGEMENTS / REFERENCES: 
+% This code uses functions written by Ken Schutte in 2019, which is used to
+% read and decode midi files. The code is under a GNU General
+% Public License, enabling us to run, study, share, and modify the
+% software. 
+%
+% More info can be found at: http://www.kenschutte.com/midi
+
+
+%% INITIAL SETUP
+clear
+close all
+clc
+
+%% DEFINE MUSIC
+
+% INTITIAL VARIABLES
+Fs = 44100;             % Sampling frequency (Hz)
+
+%  Reads our audio file, finding the pitch, endtime shows duration.
+[Notes, endtime] = midiInfo(readmidi('gym.mid'), 0, 2);
+L = size(Notes,1);      % How many notes in our midi file
+
+%  Builds a song from our notes, gives an amplitudes of 1, defines the key
+%  of our note, the duration, and takes our sampling frequency.
+x = build_song(ones(L,1), Notes(:,3), Notes(:,6)-Notes(:,5), Fs);
+
+%  Finds the duration of the notes and finds the total number of samples
+tot_samples = ceil(sum(Notes(:,6)-Notes(:,5))*Fs);
+
+%  Creates a time vector for creating our waveform
+t = 0:1/Fs:(tot_samples-1)/Fs;
+
+% Plots our waveform
+figure(1); 
+subplot(211)
+plot(t, x);
+xlabel('Time [s]')
+ylabel('Amplitude')
+% Replots with a smaller scope, 'zooming in'
+subplot(212)
+plot(t, x);
+xlabel('Time [s]')
+ylabel('Amplitude')
+axis([0 0.1 -1 1]) % Restricts our x-axis to the first 0.1 seconds, and y axis to -1:1
+
+%  ===&gt; Describe what the next line does here &lt;===
+input('Click any button to play sound')
+soundsc(x, Fs);
+
+
+
+% ========
+% YOU DO *NOT* NEED TO DESCRIBE THESE LINES (your free to figure it out though)
+W = 0.1;    % Window size
+tic;
+for mm = 1:ceil(tot_samples/Fs/W)
+    % PAUSE UNTIL NEXT FRAME
+    xlim([(mm-1)*W+[0 W]]); % Set limits of plot
+    tm = toc;                        % Check current time
+    if mm*W &lt; tm, disp(['Warning: Visualization is ' num2str(mm*W-tm)  's behind']); end
+    drawnow; pause(mm*0.1-tm);       % Synchronize with clock
+end
+% =======
+
+
+
+%%
+% =========================================
+% SUPPORTING FUNCTIONS FOUND BELOW
+% Add comments appropriately below
+% =========================================
+
+
+function x = key_to_note(A, key, dur, fs)
+% key_to_note: Converts piano key to a sinusoidal waveform
+%
+% Input Args:
+%     A: complex amplitude
+%   key: number of the note on piano keyboard
+%   dur: duration of each note (in seconds)
+%    fs: A scalar sampling rate value
+%
+% Output:
+%     x: sinusoidal waveform of the note
+    
+    %  Calculate the number of samples, creates a vector, and converts the
+    %  key to a frequency.
+    N    = floor(dur*fs);
+    t    = (0:(N-1)).'/fs;
+    freq = (440/32)*2^((key-9)/12); 
+    
+    %  ===&gt; Creates a complex sinuosoid, taking the real part for our
+    %  waveform audio
+    x    = real(A*exp(1j*2*pi*freq*t));   
+
+
+end
+
+
+function x = build_song(As, keys, durs, fs)
+% build_song:  Creates audio from our note inputs
+%
+% Input Args:
+%	  As: A length-N array of complex amplitudes for building notes
+%	keys: A length-N array of key numbers (which key on a keyboard) for building notes
+%   durs: A length-N array of durations (in seconds) for building notes
+%     fs: A scalar sampling rate value
+%
+% Output Args: 
+%      x: A length-(N*fs) length raw audio signal
+%
+    %  Creates zeroes for the samples of the audio
+    x = zeros(ceil(sum(durs)*fs), 1);      
+    for k = 1:length(keys) 
+        
+        %  Generates a note waveform, finds start point of the note based
+        %  on sum of other notes prior
+        note       = key_to_note(As(k), keys(k), durs(k), fs);  
+        start_time = sum(durs(1:k-1));
+        
+        %  Creates start time and duration to make sample indices
+        n1         = floor(start_time*fs) + 1;               
+        n2         = floor(start_time*fs) + floor(durs(k)*fs);
+        x(n1:n2)   = x(n1:n2) + note;               
+        
+    end
+
+end
+
+</pre>
+<h2 id="3">QUESTION 2</h2>
+<p>=========================</p>
+<h2 id="4">2(a) PLOT FIRST FOUR PERIODS</h2>
+<pre class="codeinput">fs = 8000;
+
+f1 = 400;
+f2 = 400;
+f3 = 600;
+
+T1 = 1/f1;
+T2 = 1/f2;
+T3 = 1/f3;
+
+t1 = 0:1/fs:4*T1;
+t2 = 0:1/fs:4*T2;
+t3 = 0:1/fs:4*T3;
+
+s1 = 3 * cos(800 * pi * t1 - pi/3);
+s2 = 2 * cos(800 * pi * t2 - pi/4);
+s3 = 2 * cos(1200 * pi * t3 - pi/4);
+
+figure;
+plot(t1, s1);
+xlabel(<span class="string">'Time (s)'</span>);
+ylabel(<span class="string">'Amplitude'</span>);
+title(<span class="string">'s1(t)'</span>);
+
+
+figure;
+plot(t2, s2);
+xlabel(<span class="string">'Time (s)'</span>);
+ylabel(<span class="string">'Amplitude'</span>);
+title(<span class="string">'s2(t)'</span>);
+
+
+figure;
+plot(t3, s3);
+xlabel(<span class="string">'Time (s)'</span>);
+ylabel(<span class="string">'Amplitude'</span>);
+title(<span class="string">'s3(t)'</span>);
+</pre>
+<img vspace="5" hspace="5" src="eel3135_FourierSynthesis_skeleton_01.png" alt=""> <img vspace="5" hspace="5" src="eel3135_FourierSynthesis_skeleton_02.png" alt=""> <img vspace="5" hspace="5" src="eel3135_FourierSynthesis_skeleton_03.png" alt=""> <h2 id="5">2(b) CREATE AND SUBMIT .WAV FILE</h2>
+<h2 id="6">2(b) CREATE AND SUBMIT .WAV FILE</h2>
+<pre class="codeinput">s1_scaled = s1 / max(abs(s1));
+s2_scaled = s2 / max(abs(s2));
+s3_scaled = s3 / max(abs(s3));
+
+audiowrite(<span class="string">'s1.wav'</span>, s1_scaled, fs);
+audiowrite(<span class="string">'s2.wav'</span>, s2_scaled, fs);
+audiowrite(<span class="string">'s3.wav'</span>, s3_scaled, fs);
+</pre>
+<h2 id="7">2(c) PLOT FIRST FOUR PERIODS</h2>
+<pre class="codeinput">x1 = s1 + 2;
+figure;
+plot(t1, x1);
+xlabel(<span class="string">'Time (s)'</span>);
+ylabel(<span class="string">'Amplitude'</span>);
+title(<span class="string">'x1(t) First Four Periods'</span>);
+grid <span class="string">on</span>;
+</pre>
+<img vspace="5" hspace="5" src="eel3135_FourierSynthesis_skeleton_04.png" alt=""> <h2 id="8">2(d) PLOT FIRST FOUR PERIODS</h2>
+<pre class="codeinput">T0 = 0.005;
+
+t = 0:1/fs:4*T0;
+
+s2 = 2*cos(800*pi*t - pi/4);
+s3 = 2*cos(1200*pi*t - pi/4);
+
+x2 = s2 + s3;
+figure;
+plot(t, x2);
+xlabel(<span class="string">'Time (s)'</span>);
+ylabel(<span class="string">'Amplitude'</span>);
+title(<span class="string">'x2(t) First Four Periods'</span>);
+grid <span class="string">on</span>;
+</pre>
+<img vspace="5" hspace="5" src="eel3135_FourierSynthesis_skeleton_05.png" alt=""> <h2 id="9">QUESTION 3</h2>
+<p>=========================</p>
+<pre class="codeinput">fs = 8000;
+</pre>
+<h2 id="10">3(a) CREATE SOUND</h2>
+<pre class="codeinput">As = [1 1 1 1 1 1 1 1 1 1 1 1 1];
+keys = [44 42 40 42 44 44 44 42 42 42 44 47 47];
+durs = [1 1 1 1 1 1 2 1 1 2 1 1 2]*1/4;
+
+song = build_song(As, keys, durs, fs);
+
+<span class="comment">% sound(song, fs);</span>
+</pre>
+<h2 id="11">3(b) MODIFY FUNCTION (key_to_note_trumpet function is at end of file)</h2>
+<p>Only need to modify function -- this area can be empty</p>
+<h2 id="12">3(c) CREATE SOUND (build_song_trumpet function is at end of file)</h2>
+<pre class="codeinput">totalLength = sum(durs)*fs;
+song = zeros(1, totalLength);
+sampleIndex = 1;
+
+<span class="keyword">for</span> i = 1:length(keys)
+
+    note = key_to_note_trumpet(As(i), keys(i), durs(i), fs);
+
+    n = length(note);
+
+    song(sampleIndex:sampleIndex+n-1) = note;
+    sampleIndex = sampleIndex + n;
+
+<span class="keyword">end</span>
+
+<span class="comment">% sound(song, fs);</span>
+</pre>
+<h2 id="13">3(d) CREATE SOUND (build_song_time function is at end of file)</h2>
+<pre class="codeinput">start_time = [0 1 2 3 4 5 6 7 8 9 10 11 12] * 1/4;
+end_time = ([0 1 2 3 4 5 7 8 9 11 12 13 15] + 0.2) * 1/4;
+end_time = end_time(1:13);
+
+song = build_song_time(As, keys, start_time, end_time, fs);
+sound(song, fs);
+</pre>
+<h2 id="14">3(e) PLOT COMPARISONS</h2>
+<pre class="codeinput">song1 = build_song(As, keys, durs, fs).';
+song2 = build_song_trumpet(As, keys, durs, fs).';
+song3 = song;
+
+t1 = 0:1/fs:(length(song1)-1)/fs;
+t2 = 0:1/fs:(length(song2)-1)/fs;
+t3 = 0:1/fs:(length(song3)-1)/fs;
+
+figure;
+plot(t1, song1);
+xlabel(<span class="string">'Time (s)'</span>);
+ylabel(<span class="string">'Amplitude'</span>);
+title(<span class="string">'Song 1'</span>);
+grid <span class="string">on</span>;
+
+figure;
+plot(t2, song2);
+xlabel(<span class="string">'Time (s)'</span>);
+ylabel(<span class="string">'Amplitude'</span>);
+title(<span class="string">'Song 2'</span>);
+grid <span class="string">on</span>;
+
+figure;
+plot(t3, song3);
+xlabel(<span class="string">'Time (s)'</span>);
+ylabel(<span class="string">'Amplitude'</span>);
+title(<span class="string">'Song 3'</span>);
+grid <span class="string">on</span>;
+</pre>
+<h2 id="15">3(f) ANSWER QUESTION</h2>
+<pre class="codeinput">
+<span class="comment">% not found, pdf goes to 3e</span>
+</pre>
+<p>========================================= SUPPORTING FUNCTIONS FOUND BELOW =========================================</p>
+<pre class="codeinput">
+<span class="keyword">function</span> x = key_to_note(A, key, dur, fs)
+<span class="comment">% key_to_note:</span>
+<span class="comment">%</span>
+<span class="comment">% Input Args:</span>
+<span class="comment">%     A: complex amplitude</span>
+<span class="comment">%   key: number of the note on piano keyboard</span>
+<span class="comment">%   dur: duration of each note (in seconds)</span>
+<span class="comment">%    fs: A scalar sampling rate value</span>
+<span class="comment">%</span>
+<span class="comment">% Output:</span>
+<span class="comment">%     x: sinusoidal waveform of the note</span>
+
+    N    = floor(dur*fs);
+    t    = (0:(N-1)).'/fs;
+    freq = (440/32)*2^((key-9)/12);
+    x    = real(A*exp(1j*2*pi*freq*t));
+
+
+<span class="keyword">end</span>
+
+
+<span class="keyword">function</span> x = build_song(As, keys, durs, fs)
+<span class="comment">% build_song:</span>
+<span class="comment">%</span>
+<span class="comment">% Input Args:</span>
+<span class="comment">%	  As: A length-N array of complex amplitudes for building notes</span>
+<span class="comment">%	keys: A length-N array of key numbers (which key on a keyboard) for building notes</span>
+<span class="comment">%   durs: A length-N array of durations (in seconds) for building notes</span>
+<span class="comment">%     fs: A scalar sampling rate value</span>
+<span class="comment">%</span>
+<span class="comment">% Output Args:</span>
+<span class="comment">%      x: A length-(N*fs) length raw audio signal</span>
+<span class="comment">%</span>
+
+    x = zeros(floor(sum(durs)*fs), 1);
+    <span class="keyword">for</span> k = 1:length(keys)
+        note       = key_to_note(As(k), keys(k), durs(k), fs);
+        start_time = sum(durs(1:k-1));
+        n1         = floor(start_time*fs) + 1;
+        n2         = floor(start_time*fs) + floor(durs(k)*fs);
+        x(n1:n2)   = x(n1:n2) + note;
+    <span class="keyword">end</span>
+
+<span class="keyword">end</span>
+
+
+<span class="keyword">function</span> x = key_to_note_trumpet(A, key, dur, fs)
+<span class="comment">% key_to_note: Produces a sinusoidal waveform corresponding to a</span>
+<span class="comment">% 	given piano key number</span>
+<span class="comment">%</span>
+<span class="comment">% Input Args:</span>
+<span class="comment">%     A: complex amplitude</span>
+<span class="comment">%   key: number of the note on piano keyboard</span>
+<span class="comment">%   dur: duration of each note (in seconds)</span>
+<span class="comment">%    fs: A scalar sampling rate value</span>
+<span class="comment">%</span>
+<span class="comment">% Output:</span>
+<span class="comment">%     x: sinusoidal waveform of the note</span>
+
+    freq = (440/32)*2^((key-9)/12);
+
+    N = floor(dur*fs);
+    t = (0:(N-1))/fs;
+
+    k_vals  = [1 2 3 4 5 6 7 8 9];
+    A_vals  = [0.1155 0.3417 0.1789 0.1232 0.0678 0.0473 0.0260 0.0045 0.0020];
+    phi_vals = [-2.1299 1.6727 -2.5454 0.6607 -2.0390 2.1597 -1.0467 1.8581 -2.3925];
+
+    x = zeros(size(t));
+
+    <span class="keyword">for</span> k = 1:length(k_vals)
+        x = x + A_vals(k) * cos(2*pi*k_vals(k)*freq*t + phi_vals(k));
+    <span class="keyword">end</span>
+
+    x = A * x;
+
+<span class="keyword">end</span>
+
+
+<span class="keyword">function</span> x = build_song_trumpet(As, keys, durs, fs)
+<span class="comment">% build_song:</span>
+<span class="comment">%</span>
+<span class="comment">% Input Args:</span>
+<span class="comment">%	  As: A length-N array of complex amplitudes for building notes</span>
+<span class="comment">%	keys: A length-N array of key numbers (which key on a keyboard) for building notes</span>
+<span class="comment">%   durs: A length-N array of durations (in seconds) for building notes</span>
+<span class="comment">%     fs: A scalar sampling rate value</span>
+<span class="comment">%</span>
+<span class="comment">% Output Args:</span>
+<span class="comment">%      x: A length-(N*fs) length raw audio signal</span>
+<span class="comment">%</span>
+
+    totalDuration = sum(durs)*fs;
+    x = zeros(1, totalDuration);
+    sampleIndex = 1;
+
+    <span class="keyword">for</span> i = 1:length(keys)
+        note = key_to_note_trumpet(As(i), keys(i), durs(i), fs);
+        n = length(note);
+        x(sampleIndex:sampleIndex+n-1) = note;
+        sampleIndex = sampleIndex + n;
+    <span class="keyword">end</span>
+
+<span class="keyword">end</span>
+
+
+
+<span class="keyword">function</span> x = build_song_time(As, keys, start_time, end_time, fs)
+<span class="comment">% build_song:</span>
+<span class="comment">%</span>
+<span class="comment">% Input Args:</span>
+<span class="comment">%          As: A length-N array of complex amplitudes for building notes</span>
+<span class="comment">%        keys: A length-N array of key numbers (which key on a keyboard) for building notes</span>
+<span class="comment">%  start_time: A length-N array of start times (in seconds) for notes</span>
+<span class="comment">%    end_time: A length-N array of end times (in seconds) for notes</span>
+<span class="comment">%          fs: A scalar sampling rate value</span>
+<span class="comment">%</span>
+<span class="comment">% Output Args:</span>
+<span class="comment">%      x: A length-(N*fs) length raw audio signal</span>
+<span class="comment">%</span>
+
+    totalDuration = ceil(max(end_time)*fs);
+    x = zeros(1, totalDuration);
+
+    <span class="keyword">for</span> i = 1:length(keys)
+        dur = end_time(i) - start_time(i);
+        note = key_to_note_trumpet(As(i), keys(i), dur, fs);
+        n1 = round(start_time(i) * fs) + 1;
+        n2 = n1 + length(note) - 1;
+
+        <span class="keyword">if</span> n2 &gt; totalDuration
+            n2 = totalDuration;
+            note = note(1:(n2 - n1 + 1));
+        <span class="keyword">end</span>
+
+        x(n1:n2) = x(n1:n2) + note;
+    <span class="keyword">end</span>
+
+<span class="keyword">end</span>
+</pre>
+<p class="footer">
+<br>
+<a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2025a</a>
+<br>
+</p>
+</div>
+<!--
+##### SOURCE BEGIN #####
+%% PREAMBLE
+% DO NOT REMOVE THE LINE BELOW
+clear;
+close all;
+
+%% QUESTION 1: COMMENTING
+% =========================
+type('eel3135_lab_FourierSynthesis_comment.m')
+
+
+
+%% QUESTION 2 
+% =========================
+%% 2(a) PLOT FIRST FOUR PERIODS
+fs = 8000;
+
+f1 = 400;
+f2 = 400;
+f3 = 600;
+
+T1 = 1/f1;
+T2 = 1/f2;
+T3 = 1/f3;
+
+t1 = 0:1/fs:4*T1;
+t2 = 0:1/fs:4*T2;
+t3 = 0:1/fs:4*T3;
+
+s1 = 3 * cos(800 * pi * t1 - pi/3);
+s2 = 2 * cos(800 * pi * t2 - pi/4);
+s3 = 2 * cos(1200 * pi * t3 - pi/4);
+
+figure;
+plot(t1, s1);
+xlabel('Time (s)');
+ylabel('Amplitude');
+title('s1(t)');
+
+
+figure;
+plot(t2, s2);
+xlabel('Time (s)');
+ylabel('Amplitude');
+title('s2(t)');
+
+
+figure;
+plot(t3, s3);
+xlabel('Time (s)');
+ylabel('Amplitude');
+title('s3(t)');
+
+%% 2(b) CREATE AND SUBMIT .WAV FILE
+
+%% 2(b) CREATE AND SUBMIT .WAV FILE
+
+s1_scaled = s1 / max(abs(s1));
+s2_scaled = s2 / max(abs(s2));
+s3_scaled = s3 / max(abs(s3));
+
+audiowrite('s1.wav', s1_scaled, fs);
+audiowrite('s2.wav', s2_scaled, fs);
+audiowrite('s3.wav', s3_scaled, fs);
+
+%% 2(c) PLOT FIRST FOUR PERIODS
+
+x1 = s1 + 2;
+figure;
+plot(t1, x1);
+xlabel('Time (s)');
+ylabel('Amplitude');
+title('x1(t) First Four Periods');
+grid on;
+
+
+%% 2(d) PLOT FIRST FOUR PERIODS
+
+T0 = 0.005;
+
+t = 0:1/fs:4*T0;
+
+s2 = 2*cos(800*pi*t - pi/4);
+s3 = 2*cos(1200*pi*t - pi/4);
+
+x2 = s2 + s3;
+figure;
+plot(t, x2);
+xlabel('Time (s)');
+ylabel('Amplitude');
+title('x2(t) First Four Periods');
+grid on;
+
+%% QUESTION 3 
+% =========================
+
+fs = 8000;
+
+%% 3(a) CREATE SOUND
+
+As = [1 1 1 1 1 1 1 1 1 1 1 1 1];
+keys = [44 42 40 42 44 44 44 42 42 42 44 47 47];
+durs = [1 1 1 1 1 1 2 1 1 2 1 1 2]*1/4;
+
+song = build_song(As, keys, durs, fs);
+
+% sound(song, fs);
+
+%% 3(b) MODIFY FUNCTION (key_to_note_trumpet function is at end of file)
+% Only need to modify function REPLACE_WITH_DASH_DASH this area can be empty
+
+%% 3(c) CREATE SOUND  (build_song_trumpet function is at end of file)
+
+totalLength = sum(durs)*fs;
+song = zeros(1, totalLength);
+sampleIndex = 1;
+
+for i = 1:length(keys)
+
+    note = key_to_note_trumpet(As(i), keys(i), durs(i), fs);
+
+    n = length(note);
+
+    song(sampleIndex:sampleIndex+n-1) = note;
+    sampleIndex = sampleIndex + n;
+
+end
+
+% sound(song, fs);
+
+
+%% 3(d) CREATE SOUND  (build_song_time function is at end of file)
+
+start_time = [0 1 2 3 4 5 6 7 8 9 10 11 12] * 1/4;
+end_time = ([0 1 2 3 4 5 7 8 9 11 12 13 15] + 0.2) * 1/4;
+end_time = end_time(1:13);
+
+song = build_song_time(As, keys, start_time, end_time, fs);
+sound(song, fs);
+
+%% 3(e) PLOT COMPARISONS
+
+song1 = build_song(As, keys, durs, fs).';
+song2 = build_song_trumpet(As, keys, durs, fs).';
+song3 = song;
+
+t1 = 0:1/fs:(length(song1)-1)/fs;
+t2 = 0:1/fs:(length(song2)-1)/fs;
+t3 = 0:1/fs:(length(song3)-1)/fs;
+
+figure;
+plot(t1, song1);
+xlabel('Time (s)');
+ylabel('Amplitude');
+title('Song 1');
+grid on;
+
+figure;
+plot(t2, song2);
+xlabel('Time (s)');
+ylabel('Amplitude');
+title('Song 2');
+grid on;
+
+figure;
+plot(t3, song3);
+xlabel('Time (s)');
+ylabel('Amplitude');
+title('Song 3');
+grid on;
+
+%% 3(f) ANSWER QUESTION
+
+
+% not found, pdf goes to 3e
+
+
+
+
+%%
+% =========================================
+% SUPPORTING FUNCTIONS FOUND BELOW
+% =========================================
+
+function x = key_to_note(A, key, dur, fs)
+% key_to_note: 
+%
+% Input Args:
+%     A: complex amplitude
+%   key: number of the note on piano keyboard
+%   dur: duration of each note (in seconds)
+%    fs: A scalar sampling rate value
+%
+% Output:
+%     x: sinusoidal waveform of the note
+
+    N    = floor(dur*fs);
+    t    = (0:(N-1)).'/fs;
+    freq = (440/32)*2^((key-9)/12); 
+    x    = real(A*exp(1j*2*pi*freq*t));   
+
+
+end
+
+
+function x = build_song(As, keys, durs, fs)
+% build_song: 
+%
+% Input Args:
+%	  As: A length-N array of complex amplitudes for building notes
+%	keys: A length-N array of key numbers (which key on a keyboard) for building notes
+%   durs: A length-N array of durations (in seconds) for building notes
+%     fs: A scalar sampling rate value
+%
+% Output Args: 
+%      x: A length-(N*fs) length raw audio signal
+%
+    
+    x = zeros(floor(sum(durs)*fs), 1);      
+    for k = 1:length(keys) 
+        note       = key_to_note(As(k), keys(k), durs(k), fs);  
+        start_time = sum(durs(1:k-1));
+        n1         = floor(start_time*fs) + 1;
+        n2         = floor(start_time*fs) + floor(durs(k)*fs);
+        x(n1:n2)   = x(n1:n2) + note;                                                                
+    end
+
+end
+
+
+function x = key_to_note_trumpet(A, key, dur, fs)
+% key_to_note: Produces a sinusoidal waveform corresponding to a 
+% 	given piano key number
+%
+% Input Args:
+%     A: complex amplitude
+%   key: number of the note on piano keyboard
+%   dur: duration of each note (in seconds)
+%    fs: A scalar sampling rate value
+%
+% Output:
+%     x: sinusoidal waveform of the note
+
+    freq = (440/32)*2^((key-9)/12); 
+
+    N = floor(dur*fs);
+    t = (0:(N-1))/fs;
+
+    k_vals  = [1 2 3 4 5 6 7 8 9];
+    A_vals  = [0.1155 0.3417 0.1789 0.1232 0.0678 0.0473 0.0260 0.0045 0.0020];
+    phi_vals = [-2.1299 1.6727 -2.5454 0.6607 -2.0390 2.1597 -1.0467 1.8581 -2.3925];
+
+    x = zeros(size(t));
+
+    for k = 1:length(k_vals)
+        x = x + A_vals(k) * cos(2*pi*k_vals(k)*freq*t + phi_vals(k));
+    end
+
+    x = A * x;
+    
+end
+
+
+function x = build_song_trumpet(As, keys, durs, fs)
+% build_song: 
+%
+% Input Args:
+%	  As: A length-N array of complex amplitudes for building notes
+%	keys: A length-N array of key numbers (which key on a keyboard) for building notes
+%   durs: A length-N array of durations (in seconds) for building notes
+%     fs: A scalar sampling rate value
+%
+% Output Args: 
+%      x: A length-(N*fs) length raw audio signal
+%
+
+    totalDuration = sum(durs)*fs;
+    x = zeros(1, totalDuration);
+    sampleIndex = 1;
+
+    for i = 1:length(keys)
+        note = key_to_note_trumpet(As(i), keys(i), durs(i), fs);
+        n = length(note);
+        x(sampleIndex:sampleIndex+n-1) = note;
+        sampleIndex = sampleIndex + n;
+    end
+
+end
+
+
+
+function x = build_song_time(As, keys, start_time, end_time, fs)
+% build_song: 
+%
+% Input Args:
+%          As: A length-N array of complex amplitudes for building notes
+%        keys: A length-N array of key numbers (which key on a keyboard) for building notes
+%  start_time: A length-N array of start times (in seconds) for notes
+%    end_time: A length-N array of end times (in seconds) for notes
+%          fs: A scalar sampling rate value
+%
+% Output Args: 
+%      x: A length-(N*fs) length raw audio signal
+%
+
+    totalDuration = ceil(max(end_time)*fs);
+    x = zeros(1, totalDuration);
+
+    for i = 1:length(keys)
+        dur = end_time(i) - start_time(i);
+        note = key_to_note_trumpet(As(i), keys(i), dur, fs);
+        n1 = round(start_time(i) * fs) + 1;
+        n2 = n1 + length(note) - 1;
+    
+        if n2 > totalDuration
+            n2 = totalDuration;
+            note = note(1:(n2 - n1 + 1));
+        end
+
+        x(n1:n2) = x(n1:n2) + note;
+    end
+
+end
+
+
+
+##### SOURCE END #####
+-->
+</body>
+</html>

@@ -1,0 +1,86 @@
+clear all; close all; clc;
+
+%load('Exam1_2025_RQ2.mat');
+load("RQ5GoNOGO.mat")
+
+% p1 = 2+0j;
+% p2 = exp(1j*2*pi/3);
+% p3 = 2*exp(1j*4*pi/3);
+% 
+% p_sum = p1+p2+p3;
+% 
+% A = abs(p_sum);
+% phi = angle(p_sum)/pi;
+% 
+% test = exp(1j*pi);
+% 
+% g = angle(test);
+% 
+% t = 0:1/1000:1;
+% 
+% figure;
+% 
+% x=1+exp(-1j*3*pi*t);
+% 
+% stem(t,x);
+
+%% Q3
+
+% t0 = 1/400;
+% f0 = 1/t0;
+% 
+% p1 = 2*exp(1j*0);
+% p2 = 2*exp(1j*0)
+% 
+
+% x = [0,0,2,-2,-2,0];
+% h = [0.25,1,0.125,0.125];
+% 
+% convoluted = conv(x,h);
+% 
+% n = 1:(length(convoluted));
+% 
+% figure;
+% stem(n,convoluted);
+% 
+% figure;
+% 
+% B = [1-3i, 1.5-1.5i, 4 - 2i, 2 - 4i, 4 + 0i, 2 + 4i, 4 + 2i, 1.5 + 1.5i, 1 + 3i];
+% k = [-7, -4, -2, -1, 0, 1, 2, 4, 7];
+% A = abs(B);
+% phi = angle(B);
+% 
+% f0 = 10;
+% fs = 600;
+% T = 1/fs;
+% t = 0:T:1-T;
+% 
+% f = f0 * k;
+% 
+% phasor = zeros(length(t));
+% 
+% 
+% for n = 1:length(k)
+% 
+%     phasor = phasor(n) + A(n)*exp(1j*phi(n)*exp(1j*2*pi*f(n)*t));
+% 
+% end
+% 
+% phasor = real(phasor);
+% 
+% plot(t, phasor);
+% 
+% sumGO = sum(phasor-GO).^2
+% sumNOGO = sum(phasor-NOGO).^2
+% 
+% 
+% 
+% plot(t, sumGO);
+% hold on;
+% % plot(t, sumNOGO);
+% 
+% legend('Go', 'NoGo');
+
+t = 0:1/400:1;
+
+psum = 2*exp(1j*2*pi*100*t) + exp(1j*2*pi)

@@ -1,50 +1,28 @@
-%% QUESTION 1
+clear all; close all; clc;
 
-% PART A
+fs = 2400;
+f1 = 313; f2 = 935;
+w1 = 2*pi*f1/fs;
+w2 = 2*pi*f2/fs;
 
-n = 0:63;
+a_vals = 0.01:0.01:0.25;  % candidate a values
+colors = jet(length(a_vals));
 
-x = sin(0.4*pi*n);
+Y = zeros(1024,length(a_vals));  % preallocate for magnitude response
+W = linspace(0,pi,1024);         % frequency vector (rad/sample)
 
-h = [1, -1, 1];
-
-y = conv(x,h);
-
-% PART B
-
-N = 66;
-
-x6 = [x zeros(1, N-length(x))];
-h6 = [h zeros(1, N-length(h))];
-
-Y_fft = ifft(fft(x6) .* fft(h6));
-
-% PART C
-
-figure; stem(n,x); title('x[n]'); xlabel('n'); ylabel('x[n]');
-figure; stem(0:length(h)-1,h); title('h[n]'); xlabel('n'); ylabel('h[n]');
-figure; stem(0:length(y)-1,y); title('y[n] = x[n]*h[n]'); xlabel('n'); ylabel('y[n]');
-
-% PART D
-N = 4;
-y_circ4 = ifft(fft(x,N) .* fft(h,N));
-y_lin4 = y(1:N);
-
-figure;
-stem(0:N-1, y_lin4, 'b', 'filled'); hold on;
-stem(0:N-1, y_circ4, 'r', 'filled');
-xlabel('n'); ylabel('Amplitude');
-title('Linear vs N=4 Circular Convolution');
-legend('Linear','Circular');
-
-for k = 0:N-1
-    if y_lin4(k+1) ~= y_circ4(k+1)
-        text(k, y_circ4(k+1)+0.05, ['n=', num2str(k)], 'Color','red');
-    end
+for k = 1:length(a_vals)
+    figure; grid on;
+    xlabel('Normalized Frequency (rad/sample)');
+    ylabel('|H(e^{j\omega})|');
+    title('FIR Magnitude Response for Different a');
+    a = a_vals(k);
+    b = [a; (0.6/a-1); -5*a; 0; (0.44-a); (0.06-a); (-10*a+0.3); (-0.06+a); (10*a-0.54)];
+    H = freqz(b,1,W);        % complex frequency response
+    Y(:,k) = abs(H);          % store magnitude
+    plot(W, Y(:,k), 'Color', colors(k,:), 'DisplayName',['a=',num2str(a)]);
 end
 
-%% QUESTION 2
-
-% H = (sin(5*w/2))/(5*sin(w/2))*e^(-j*2*w)
-% |H| = abs(H)
-% <H = angle(H)
+xline(w1,'r--','f1=313Hz');
+xline(w2,'g--','f2=935Hz');
+legend show

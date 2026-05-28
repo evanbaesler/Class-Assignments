@@ -1,0 +1,17 @@
+Quartus Prime Archive log --	C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab3/lab3_2bit_cnt/lab3_2bit_cnt.qarlog
+
+Archive:	C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab3/lab3_2bit_cnt/lab3_2bit_cnt.qar
+Date:		Tue Feb 24 17:44:46 2026
+Quartus Prime		25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab3/lab3_2bit_cnt/Waveform.vwf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab3/lab3_2bit_cnt/lab2_decoder.bdf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab3/lab3_2bit_cnt/lab3_2bit_cnt.bdf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab3/lab3_2bit_cnt/lab3_2bit_cnt.qpf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab3/lab3_2bit_cnt/lab3_2bit_cnt.qsf
+c:/altera_lite/25.1std/quartus/bin64/assignment_defaults.qdf
+	======= Total: 6 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

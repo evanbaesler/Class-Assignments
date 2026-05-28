@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Sun Apr  5 20:35:59 2026
+Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+Revision Name : Lab6_PART1
+Top-level Entity Name : Lab6_PART1
+Family : MAX 10
+Total logic elements : 33
+    Total combinational functions : 31
+    Dedicated logic registers : 11
+Total registers : 11
+Total pins : 28
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

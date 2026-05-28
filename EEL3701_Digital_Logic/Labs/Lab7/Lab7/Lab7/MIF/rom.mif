@@ -1,0 +1,70 @@
+% Automated build for Lab7.asm % 
+DEPTH = 4096;
+WIDTH = 8;
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+CONTENT
+BEGIN
+
+0000		:	08;	-- LDX #TableData
+0001		:	4B;
+0002		:	1E;
+
+0003		:	0B;	-- LDY TableAddress
+0004		:	4B;
+0005		:	1E;
+
+0006		:	0C;	-- LDAA 02,X
+0007		:	02;
+
+0008		:	06;	-- STAA LoopTrack
+0009		:	00;
+000a		:	10;
+
+000b		:	02;	-- LDAA #One
+000c		:	01;
+
+000d		:	0E;	-- LDAB 04,X
+000e		:	04;
+
+000f		:	1B;	-- COMB
+
+0010		:	15;	-- SUM_AB
+
+0011		:	0C;	-- LDAA 03,X
+0012		:	03;
+
+0013		:	15;	-- SUM_AB
+
+0014		:	13;	-- STAB 00,Y
+0015		:	00;
+
+0016		:	31;	-- INY
+
+0017		:	30;	-- INX
+
+0018		:	30;	-- INX
+
+0019		:	04;	-- LDAA LoopTrack
+001a		:	00;
+001b		:	10;
+
+001c		:	03;	-- LDAB #NegOne
+001d		:	FF;
+
+001e		:	14;	-- SUM_BA
+
+001f		:	06;	-- STAA LoopTrack
+0020		:	00;
+0021		:	10;
+
+0022		:	21;	-- BNE Loop
+0023		:	0B;
+
+0024		:	20;	-- BEQ Done
+0025		:	24;
+
+[0026..0fff]	:	00;
+
+
+END

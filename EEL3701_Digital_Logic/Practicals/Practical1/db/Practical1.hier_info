@@ -1,0 +1,13 @@
+|Practical1
+Z1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+START_L => inst.ACLR
+START_L => inst1.PRESET
+CNT => inst.IN0
+CNT => inst1.IN0
+CNT => inst8.IN1
+CLK => inst.CLK
+CLK => inst1.CLK
+Z0 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Y_L <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+
+

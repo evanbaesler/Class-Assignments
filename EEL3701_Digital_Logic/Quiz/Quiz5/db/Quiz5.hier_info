@@ -1,0 +1,50 @@
+|Quiz5
+Buzz <= quiz5block:inst400.Buzz
+CF => quiz5block:inst400.CF
+Q[0] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLR_L => inst.ACLR
+CLR_L => inst5.ACLR
+CLR_L => inst6.ACLR
+CLK => inst.CLK
+CLK => inst5.CLK
+CLK => inst6.CLK
+Fizz <= quiz5block:inst400.Fizz
+
+
+|Quiz5|quiz5block:inst400
+CF => Fizz.IN0
+CF => Fizz.IN0
+CF => Buzz.IN1
+CF => Buzz.IN1
+Q[0] => D.IN1
+Q[0] => D.IN1
+Q[0] => D.IN1
+Q[0] => Fizz.IN1
+Q[0] => D.IN1
+Q[0] => D.IN1
+Q[0] => D.IN1
+Q[0] => D.IN1
+Q[0] => Fizz.IN1
+Q[0] => Fizz.IN1
+Q[1] => D.IN0
+Q[1] => D.IN0
+Q[1] => Fizz.IN1
+Q[1] => Fizz.IN1
+Q[1] => D.IN0
+Q[1] => D.IN0
+Q[1] => Fizz.IN1
+Q[2] => D.IN1
+Q[2] => D.IN1
+Q[2] => Fizz.IN1
+Q[2] => D.IN1
+Q[2] => D.IN1
+Q[2] => Fizz.IN1
+D[0] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[1] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[2] <= D.DB_MAX_OUTPUT_PORT_TYPE
+Buzz <= Buzz.DB_MAX_OUTPUT_PORT_TYPE
+Fizz <= Fizz.DB_MAX_OUTPUT_PORT_TYPE
+
+

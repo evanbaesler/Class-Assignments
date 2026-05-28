@@ -1,0 +1,64 @@
+|Lab2ToVHDL_Decoder
+A_L <= DECODER:inst1.A_L
+T_L => DECODER:inst1.T_L
+X[0] => DECODER:inst1.X[0]
+X[1] => DECODER:inst1.X[1]
+X[2] => DECODER:inst1.X[2]
+X[3] => DECODER:inst1.X[3]
+B_L <= DECODER:inst1.B_L
+C_L <= DECODER:inst1.C_L
+D_L <= DECODER:inst1.D_L
+E_L <= DECODER:inst1.E_L
+F_L <= DECODER:inst1.F_L
+G_L <= DECODER:inst1.G_L
+
+
+|Lab2ToVHDL_Decoder|DECODER:inst1
+X[0] => m1.IN1
+X[0] => m3.IN1
+X[0] => m5.IN1
+X[0] => m7.IN1
+X[0] => m9.IN1
+X[0] => mB.IN1
+X[0] => mD.IN1
+X[0] => mF.IN1
+X[0] => m0.IN1
+X[0] => m2.IN1
+X[0] => m6.IN1
+X[0] => m8.IN1
+X[0] => mA.IN1
+X[0] => mC.IN1
+X[0] => mE.IN1
+X[0] => m4.IN1
+X[1] => m2.IN1
+X[1] => m6.IN1
+X[1] => mA.IN1
+X[1] => mE.IN1
+X[1] => m0.IN1
+X[1] => m5.IN1
+X[1] => m8.IN1
+X[1] => mC.IN1
+X[2] => m5.IN0
+X[2] => mC.IN0
+X[2] => m0.IN0
+X[2] => m8.IN0
+X[3] => m8.IN1
+X[3] => mC.IN1
+X[3] => m0.IN1
+X[3] => m5.IN1
+T_L => A_H.IN1
+T_L => B_H.IN1
+T_L => C_H.IN1
+T_L => D_H.IN1
+T_L => E_H.IN1
+T_L => F_H.IN1
+T_L => G_H.IN1
+A_L <= A_H.DB_MAX_OUTPUT_PORT_TYPE
+B_L <= B_H.DB_MAX_OUTPUT_PORT_TYPE
+C_L <= C_H.DB_MAX_OUTPUT_PORT_TYPE
+D_L <= D_H.DB_MAX_OUTPUT_PORT_TYPE
+E_L <= E_H.DB_MAX_OUTPUT_PORT_TYPE
+F_L <= F_H.DB_MAX_OUTPUT_PORT_TYPE
+G_L <= G_H.DB_MAX_OUTPUT_PORT_TYPE
+
+

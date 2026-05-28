@@ -1,0 +1,201 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "C_out",
+					"strict" : false
+				},
+				{
+					"name" : "REGA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "REGA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "REGA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "REGA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "REGB[3]",
+					"strict" : false
+				},
+				{
+					"name" : "REGB[2]",
+					"strict" : false
+				},
+				{
+					"name" : "REGB[1]",
+					"strict" : false
+				},
+				{
+					"name" : "REGB[0]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "REGA_A_L",
+					"strict" : false
+				},
+				{
+					"name" : "REGA_B_L",
+					"strict" : false
+				},
+				{
+					"name" : "REGA_C_L",
+					"strict" : false
+				},
+				{
+					"name" : "REGA_D_L",
+					"strict" : false
+				},
+				{
+					"name" : "REGA_E_L",
+					"strict" : false
+				},
+				{
+					"name" : "REGA_F_L",
+					"strict" : false
+				},
+				{
+					"name" : "REGA_G_L",
+					"strict" : false
+				},
+				{
+					"name" : "REGB_A_L",
+					"strict" : false
+				},
+				{
+					"name" : "REGB_B_L",
+					"strict" : false
+				},
+				{
+					"name" : "REGB_C_L",
+					"strict" : false
+				},
+				{
+					"name" : "REGB_D_L",
+					"strict" : false
+				},
+				{
+					"name" : "REGB_E_L",
+					"strict" : false
+				},
+				{
+					"name" : "REGB_F_L",
+					"strict" : false
+				},
+				{
+					"name" : "REGB_G_L",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT_A_L",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT_B_L",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT_C_L",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT_D_L",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT_E_L",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT_F_L",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT_G_L",
+					"strict" : false
+				},
+				{
+					"name" : "C_in",
+					"strict" : false
+				},
+				{
+					"name" : "MSC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MSC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MSC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MSB[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MSB[0]",
+					"strict" : false
+				},
+				{
+					"name" : "INPUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "CLR_L",
+					"strict" : false
+				},
+				{
+					"name" : "MSA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MSA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "INPUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "INPUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "INPUT[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

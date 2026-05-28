@@ -1,0 +1,83 @@
+library ieee; use ieee.std_logic_1164.all
+
+entity DECODER is port(
+
+X: in std_logic_vector(3 downto 0);
+T: in std_logic;
+
+A: out std_logic;
+B: out std_logic;
+C: out std_logic;
+D: out std_logic;
+E: out std_logic;
+F: out std_logic;
+G: out std_logic;
+
+);
+
+end DECODER;
+
+architecture behavior of DECODER is
+
+signal m0: std_logic;
+signal m1: std_logic;
+signal m2: std_logic;
+signal m3: std_logic;
+signal m4: std_logic;
+signal m5: std_logic;
+signal m6: std_logic;
+signal m7: std_logic;
+signal m8: std_logic;
+signal m9: std_logic;
+signal mA: std_logic;
+signal mB: std_logic;
+signal mC: std_logic;
+signal mD: std_logic;
+signal mE: std_logic;
+signal mF: std_logic;
+
+signal A_L: std_logic;
+signal B_L: std_logic;
+signal C_L: std_logic;
+signal D_L: std_logic;
+signal E_L: std_logic;
+signal F_L: std_logic;
+signal G_L: std_logic;
+
+begin
+
+A_L <= not(A);
+B_L <= not(B);
+C_L <= not(C);
+D_L <= not(D);
+E_L <= not(E);
+F_L <= not(F);
+G_L <= not(G);
+
+m0 <= not X(3) and not X(2) and not X(1) and not X(0);
+m1 <= not X(3) and not X(2) and not X(1) and X(0);
+m2 <= not X(3) and not X(2) and X(1) and not X(0);
+m3 <= not X(3) and not X(2) and X(1) and X(0);
+m4 <= not X(3) and X(2) and not X(1) and not X(0);
+m5 <= not X(3) and X(2) and not X(1) and X(0);
+m6 <= not X(3) and X(2) and X(1) and not X(0);
+m7 <= not X(3) and X(2) and X(1) and X(0);
+m8 <= X(3) and not X(2) and not X(1) and not X(0);
+m9 <= X(3) and not X(2) and not X(1) and X(0);
+mA <= X(3) and not X(2) and X(1) and not X(0);
+mB <= X(3) and not X(2) and X(1) and X(0);
+mC <= X(3) and X(2) and not X(1) and not X(0);
+mD <= X(3) and X(2) and not X(1) and X(0);
+mE <= X(3) and X(2) and X(1) and not X(0);
+mF <= X(3) and X(2) and X(1) and ;
+
+
+A <= T or (m0 or m2 or m3 or m5 or m6 or m7 or m8 or m9 or mA or mC or mE or mF);
+B <= T or (m0 or m1 or m2 or m3 or m4 or m7 or m8 or m9 or mA or mD);
+C <= T or (m0 or m1 or m3 or m4 or m5 or m6 or m7 or m8 or m9 or mA or mB or mD);
+D <= T or (m0 or m2 or m3 or m5 or m6 or m8 or m9 or mB or mC or mD or mE);
+E <= T or (m0 or m2 or m6 or m8 or mA or mB or mC or mD or mE or mF);
+F <= T or (m0 or m4 or m5 or m6 or m8 or m9 or mA or mB or mC or mE or mF);
+G <= T or (m2 or m3 or m4 or m5 or m6 or m8 or m9 or mA or mB or mD or mE or mF);
+
+end behavior;

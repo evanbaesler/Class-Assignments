@@ -1,0 +1,38 @@
+Quartus Prime Archive log --	C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART2/Lab6_PART2.qarlog
+
+Archive:	C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART2/Lab6_PART2.qar
+Date:		Tue Apr  7 17:20:27 2026
+Quartus Prime		25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART2/Lab6_PART2.bdf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART2/Lab6_PART2.qpf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART2/Lab6_PART2.qsf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART2/Lab6_ROM.bsf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART2/Lab6_ROM.cmp
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART2/Lab6_ROM.qip
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART2/Lab6_ROM.vhd
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART2/Waveform.vwf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART2/lab2_decoder.bdf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART2/lab6.mif
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART2_CONT/Lab6_PART2_CONT.bdf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART2_CONT/Lab6_PART2_CONT_COMP.vhd
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART2_IR/Lab6_IR.bdf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_RALU/Lab6_RALU.bdf
+c:/altera_lite/25.1std/quartus/bin64/assignment_defaults.qdf
+	======= Total: 15 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Tue Apr  7 18:57:26 2026
+Source archive file:	C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART2/Lab6_PART2.qar
+Archive was extracted into	C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART2/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Tue Apr  7 19:26:50 2026
+Source archive file:	C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART2/Lab6_PART2.qar
+Archive was extracted into	C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART2/Lab6_PART2_restored/
+		 - successfully.

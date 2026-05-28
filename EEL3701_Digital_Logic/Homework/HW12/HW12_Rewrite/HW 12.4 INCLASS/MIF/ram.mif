@@ -1,0 +1,19 @@
+% Automated build for HW 12.4 INCLASS.asm % 
+DEPTH = 4096;
+WIDTH = 8;
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+CONTENT
+BEGIN
+
+0000		:	00;	-- TableData dc.b 0,1,37,37,1,0
+0001		:	01;
+0002		:	25;
+0003		:	25;
+0004		:	01;
+0005		:	00;
+
+[0006..0fff]	:	00;
+
+
+END

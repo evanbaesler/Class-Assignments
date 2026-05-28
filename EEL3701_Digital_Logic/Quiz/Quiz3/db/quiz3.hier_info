@@ -1,0 +1,9 @@
+|quiz3
+Q[0] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst.CLK
+CLK => inst1.CLK
+START_L => inst.PRESET
+START_L => inst1.ACLR
+
+

@@ -1,0 +1,12 @@
+% Automated build for Lab7Practice.asm % 
+DEPTH = 4096;
+WIDTH = 8;
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+CONTENT
+BEGIN
+
+[0000..0fff]	:	00;
+
+
+END

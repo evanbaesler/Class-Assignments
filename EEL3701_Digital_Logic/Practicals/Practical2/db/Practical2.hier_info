@@ -1,0 +1,12 @@
+|Practical2
+Y_L <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+P => inst6.IN0
+P => inst.IN0
+Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
+START_L => inst.ACLR
+CLK => inst.CLK
+Z[0] <= <VCC>
+Z[1] <= <VCC>
+Z[2] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+

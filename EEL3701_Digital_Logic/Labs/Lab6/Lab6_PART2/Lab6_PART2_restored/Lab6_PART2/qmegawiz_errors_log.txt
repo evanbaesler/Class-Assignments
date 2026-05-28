@@ -1,0 +1,13 @@
+
+
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART2/Lab6_PART2_restored/Lab6_PART2/Lab6_ROM.v
+
+Apr 07 07PM:48:39>: The following design file, which has identical name but a different extension 
+from the specified variation file, already exists in the working directory:
+
+Lab6_ROM.vhd
+
+This may create a conflict of design files and/or lead to undesirable side
+effects.
+
+Is it OK to continue file generation?

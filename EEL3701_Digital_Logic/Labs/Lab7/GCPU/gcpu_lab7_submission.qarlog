@@ -1,0 +1,46 @@
+Quartus Prime Archive log --	C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_lab7_submission.qarlog
+
+Archive:	C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_lab7_submission.qar
+Date:		Tue Apr 21 17:33:10 2026
+Quartus Prime		25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/CONTROLLER_ROM.bsf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/CONTROLLER_ROM.qip
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/CONTROLLER_ROM.vhd
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/EEPROM.bsf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/EEPROM.qip
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/EEPROM.vhd
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/EPROM.bsf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/EPROM.qip
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/EPROM.vhd
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/SRAM.bsf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/SRAM.qip
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/SRAM.vhd
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/alu/alu.bdf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/computer.qpf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/computer.qsf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/computer.vwf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/computer_assignment_defaults.qdf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/computer_programming.bdf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/computer_simulation.bdf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/controller.bdf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/cpu/cpu.bdf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/db/computer.sim.cvwf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/eprom.mif
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/hex_decoder.vhd
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/ir/ir.bdf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/pc_mar_ix/pc_mar_ix.bdf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/sram.mif
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/xdr_ydr/xdr_ydr.bdf
+C:/users/ebaes/documents/github/class_assignments/eel3701_digital_logic/labs/lab7/gcpu/controller_rom.mif
+	======= Total: 29 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Tue Apr 21 19:41:59 2026
+Source archive file:	C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_lab7_submission.qar
+Archive was extracted into	C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/submission/
+		 - successfully.

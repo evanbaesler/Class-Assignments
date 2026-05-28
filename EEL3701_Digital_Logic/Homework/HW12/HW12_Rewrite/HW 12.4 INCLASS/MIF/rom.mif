@@ -1,0 +1,84 @@
+% Automated build for HW 12.4 INCLASS.asm % 
+DEPTH = 4096;
+WIDTH = 8;
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+CONTENT
+BEGIN
+
+0000		:	02;	-- LDAA #0
+0001		:	00;
+
+0002		:	06;	-- STAA Amount37
+0003		:	00;
+0004		:	11;
+
+0005		:	02;	-- LDAA #MaxAddress
+0006		:	06;
+
+0007		:	06;	-- STAA LoopCount
+0008		:	01;
+0009		:	11;
+
+000a		:	08;	-- LDX #Table
+000b		:	00;
+000c		:	10;
+
+000d		:	04;	-- LDAA LoopCount
+000e		:	01;
+000f		:	11;
+
+0010		:	20;	-- BEQ DONE
+0011		:	2F;
+
+0012		:	03;	-- LDAB #Neg1
+0013		:	FF;
+
+0014		:	14;	-- Sum_BA
+
+0015		:	06;	-- STAA LoopCount
+0016		:	01;
+0017		:	11;
+
+0018		:	0C;	-- LDAA 0,X
+0019		:	00;
+
+001a		:	03;	-- LDAB #Neg37
+001b		:	DB;
+
+001c		:	14;	-- SUM_BA
+
+001d		:	30;	-- INX
+
+001e		:	20;	-- BEQ IsEqual
+001f		:	22;
+
+0020		:	21;	-- BNE LOOP
+0021		:	0D;
+
+0022		:	04;	-- LDAA Amount37
+0023		:	00;
+0024		:	11;
+
+0025		:	03;	-- LDAB #1
+0026		:	01;
+
+0027		:	14;	-- SUM_BA
+
+0028		:	06;	-- STAA Amount37
+0029		:	00;
+002a		:	11;
+
+002b		:	02;	-- LDAA #0
+002c		:	00;
+
+002d		:	20;	-- BEQ LOOP
+002e		:	0D;
+
+002f		:	20;	-- BEQ DONE
+0030		:	2F;
+
+[0031..0fff]	:	00;
+
+
+END

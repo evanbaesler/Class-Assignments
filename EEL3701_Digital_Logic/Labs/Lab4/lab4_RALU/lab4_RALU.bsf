@@ -1,0 +1,247 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 216 464)
+	(text "lab4_RALU" (rect 5 0 67 13)(font "DejaVu Sans Condensed" (font_size 8)))
+	(text "inst" (rect 8 433 25 444)(font "DejaVu Sans Condensed" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK" (rect 0 0 23 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "CLK" (rect 21 27 44 40)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "C_in" (rect 0 0 24 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "C_in" (rect 21 43 45 56)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "INPUT[3..0]" (rect 0 0 67 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "INPUT[3..0]" (rect 21 59 88 72)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "MSA[1..0]" (rect 0 0 57 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "MSA[1..0]" (rect 21 75 78 88)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "MSB[1..0]" (rect 0 0 57 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "MSB[1..0]" (rect 21 91 78 104)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "MSC[2..0]" (rect 0 0 57 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "MSC[2..0]" (rect 21 107 78 120)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 200 32)
+		(output)
+		(text "REGA_A_L" (rect 0 0 59 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "REGA_A_L" (rect 120 27 179 40)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 200 32)(pt 184 32))
+	)
+	(port
+		(pt 200 48)
+		(output)
+		(text "REGB_A_L" (rect 0 0 59 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "REGB_A_L" (rect 120 43 179 56)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 200 48)(pt 184 48))
+	)
+	(port
+		(pt 200 64)
+		(output)
+		(text "OUTPUT_A_L" (rect 0 0 74 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "OUTPUT_A_L" (rect 105 59 179 72)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 200 64)(pt 184 64))
+	)
+	(port
+		(pt 200 80)
+		(output)
+		(text "REGA_B_L" (rect 0 0 59 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "REGA_B_L" (rect 120 75 179 88)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 200 80)(pt 184 80))
+	)
+	(port
+		(pt 200 96)
+		(output)
+		(text "REGB_B_L" (rect 0 0 59 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "REGB_B_L" (rect 120 91 179 104)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 200 96)(pt 184 96))
+	)
+	(port
+		(pt 200 112)
+		(output)
+		(text "OUTPUT_B_L" (rect 0 0 74 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "OUTPUT_B_L" (rect 105 107 179 120)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 200 112)(pt 184 112))
+	)
+	(port
+		(pt 200 128)
+		(output)
+		(text "REGA_C_L" (rect 0 0 59 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "REGA_C_L" (rect 120 123 179 136)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 200 128)(pt 184 128))
+	)
+	(port
+		(pt 200 144)
+		(output)
+		(text "REGB_C_L" (rect 0 0 59 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "REGB_C_L" (rect 120 139 179 152)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 200 144)(pt 184 144))
+	)
+	(port
+		(pt 200 160)
+		(output)
+		(text "OUTPUT_C_L" (rect 0 0 74 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "OUTPUT_C_L" (rect 105 155 179 168)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 200 160)(pt 184 160))
+	)
+	(port
+		(pt 200 176)
+		(output)
+		(text "REGA_D_L" (rect 0 0 60 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "REGA_D_L" (rect 119 171 179 184)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 200 176)(pt 184 176))
+	)
+	(port
+		(pt 200 192)
+		(output)
+		(text "REGB_D_L" (rect 0 0 60 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "REGB_D_L" (rect 119 187 179 200)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 200 192)(pt 184 192))
+	)
+	(port
+		(pt 200 208)
+		(output)
+		(text "OUTPUT_D_L" (rect 0 0 75 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "OUTPUT_D_L" (rect 104 203 179 216)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 200 208)(pt 184 208))
+	)
+	(port
+		(pt 200 224)
+		(output)
+		(text "REGA_E_L" (rect 0 0 59 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "REGA_E_L" (rect 120 219 179 232)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 200 224)(pt 184 224))
+	)
+	(port
+		(pt 200 240)
+		(output)
+		(text "REGB_E_L" (rect 0 0 59 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "REGB_E_L" (rect 120 235 179 248)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 200 240)(pt 184 240))
+	)
+	(port
+		(pt 200 256)
+		(output)
+		(text "OUTPUT_E_L" (rect 0 0 73 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "OUTPUT_E_L" (rect 106 251 179 264)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 200 256)(pt 184 256))
+	)
+	(port
+		(pt 200 272)
+		(output)
+		(text "REGA_F_L" (rect 0 0 57 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "REGA_F_L" (rect 122 267 179 280)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 200 272)(pt 184 272))
+	)
+	(port
+		(pt 200 288)
+		(output)
+		(text "REGB_F_L" (rect 0 0 57 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "REGB_F_L" (rect 122 283 179 296)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 200 288)(pt 184 288))
+	)
+	(port
+		(pt 200 304)
+		(output)
+		(text "OUTPUT_F_L" (rect 0 0 73 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "OUTPUT_F_L" (rect 106 299 179 312)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 200 304)(pt 184 304))
+	)
+	(port
+		(pt 200 320)
+		(output)
+		(text "REGA_G_L" (rect 0 0 60 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "REGA_G_L" (rect 119 315 179 328)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 200 320)(pt 184 320))
+	)
+	(port
+		(pt 200 336)
+		(output)
+		(text "REGB_G_L" (rect 0 0 60 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "REGB_G_L" (rect 119 331 179 344)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 200 336)(pt 184 336))
+	)
+	(port
+		(pt 200 352)
+		(output)
+		(text "OUTPUT_G_L" (rect 0 0 75 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "OUTPUT_G_L" (rect 104 347 179 360)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 200 352)(pt 184 352))
+	)
+	(port
+		(pt 200 368)
+		(output)
+		(text "OUTPUT[3..0]" (rect 0 0 79 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "OUTPUT[3..0]" (rect 100 363 179 376)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 200 368)(pt 184 368)(line_width 3))
+	)
+	(port
+		(pt 200 384)
+		(output)
+		(text "REGA[3..0]" (rect 0 0 64 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "REGA[3..0]" (rect 115 379 179 392)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 200 384)(pt 184 384)(line_width 3))
+	)
+	(port
+		(pt 200 400)
+		(output)
+		(text "REGB[3..0]" (rect 0 0 64 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "REGB[3..0]" (rect 115 395 179 408)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 200 400)(pt 184 400)(line_width 3))
+	)
+	(port
+		(pt 200 416)
+		(output)
+		(text "C_out" (rect 0 0 34 13)(font "DejaVu Sans Condensed" (font_size 8)))
+		(text "C_out" (rect 145 411 179 424)(font "DejaVu Sans Condensed" (font_size 8)))
+		(line (pt 200 416)(pt 184 416))
+	)
+	(drawing
+		(rectangle (rect 16 16 184 432))
+	)
+)

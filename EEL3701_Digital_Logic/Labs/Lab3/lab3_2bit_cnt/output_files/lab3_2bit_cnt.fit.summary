@@ -1,0 +1,18 @@
+Fitter Status : Successful - Mon Feb 23 20:31:48 2026
+Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+Revision Name : lab3_2bit_cnt
+Top-level Entity Name : lab3_2bit_cnt
+Family : MAX 10
+Device : 10M50DAF484C6GES
+Timing Models : Preliminary
+Total logic elements : 6 / 49,760 ( < 1 % )
+    Total combinational functions : 5 / 49,760 ( < 1 % )
+    Dedicated logic registers : 2 / 49,760 ( < 1 % )
+Total registers : 2
+Total pins : 13 / 360 ( 4 % )
+Total virtual pins : 0
+Total memory bits : 0 / 1,677,312 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )

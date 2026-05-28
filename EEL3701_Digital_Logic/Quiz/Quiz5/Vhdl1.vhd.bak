@@ -1,0 +1,52 @@
+-- ex1.vhd from the Examples page of the course website
+library ieee;
+use ieee.std_logic_1164.all;
+entity quiz5 is
+port(
+
+Check_Fizz: in std_logic;
+Q : in std_logic_vector(3 downto 0);
+D : out std_logic_vector(3 downto 0);
+
+end quiz5;
+
+architecture behav of quiz5 is
+
+begin
+
+D(2) <= (not Q(2) and not Q(1) and not Q(0)) or
+(not Q(2) and Q(1) and not Q(0)) or
+(Q(2) and not Q(1) and Q(0)) or
+(Q(2) and Q(1) and not Q(0));
+
+D(1) <= (not Q(2) and Q(1) and Q(0)) or
+(Q(2) and not Q(1) and not Q(0)) or
+(Q(2) and not Q(1) and Q(0)) or
+(Q(2) and Q(1) and not Q(0));
+
+D(0) <= (not Q(2) and Q(1) and not Q(0)) or
+(Q(2) and not Q(1) and not Q(0)) or
+(Q(2) and Q(1) and not Q(0)) or
+(Q(2) and Q(1) and Q(0));
+
+-- Outputs
+Buzz = '1' when 
+(Q = "000" and not CF) or
+(Q = "010") or
+(Q = "100") or
+(Q = "110" and not CF)
+else 0;
+
+Fizz = '1' when
+(CF and Q = "000") or
+(CF and Q = "011") or
+(CF and Q = "110")
+else 0;
+
+end behav;
+
+
+--To declare a bus, use
+--BUS_NAME: out bit_vector(1 downto 0);
+--And access bit 1 with
+--BUS_NAME(1)

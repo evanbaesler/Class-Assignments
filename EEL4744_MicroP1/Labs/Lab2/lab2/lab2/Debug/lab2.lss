@@ -1,12 +1,12 @@
 
-AVRASM ver. 2.2.8  C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab1\lab1\main.asm Sun May 31 14:51:23 2026
+AVRASM ver. 2.2.8  C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab2\lab2\lab2\Lab2_4.asm Mon Jun 01 21:01:36 2026
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.3.146\avrasm\inc\ATxmega128A1Udef.inc'
-C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab1\lab1\main.asm(19): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.3.146\avrasm\inc\ATxmega128a1udef.inc'
+C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab2\lab2\lab2\Lab2_4.asm(25): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.3.146\avrasm\inc\ATxmega128a1udef.inc'
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.3.146\avrasm\inc\ATxmega128A1Udef.inc'
-C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab1\lab1\main.asm(19): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.3.146\avrasm\inc\ATxmega128a1udef.inc'
+C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab2\lab2\lab2\Lab2_4.asm(25): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.3.146\avrasm\inc\ATxmega128a1udef.inc'
                                  
-                                 ;
+                                 /*
                                  
                                  
                                  ;*************************************************************************
@@ -6715,23 +6715,29 @@ C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab1\lab1
                                  
                                  
                                  
-                                 ; lab1.asm
-                                 ;
-                                 ; Created: 5/24/2026 6:45:58 PM
-                                 ; Author : Evan Baesler
-                                 ;
-                                 ; Replace with your application code:
+                                  * Lab2_4.asm
+                                  *
+                                  *  Created: 5/31/2026 10:24:41 PM
+                                  *   Author: Evan Baesler
+                                  */ 
                                  
-                                 ;************************************************************************
-                                 ;  File name: lab1.asm
-                                 ;  Author:  Christopher Crary
+                                  ;******************************************************************************
+                                 ;  File name: lab2_u26_4_skeleton.asm
+                                 ;  Author: Christopher Crary
                                  ;  Last Modified By: Dr. Schwartz
-                                 ;  Last Modified On: 15 May 2026
-                                 ;  Description: To filter data stored within a predefined input table 
-                                 ;				based on a set of given conditions and store 
-                                 ;				a subset of filtered values into an output table.
-                                 ;************************************************************************
-                                 ;*********************************INCLUDES*******************************
+                                 ;  Last Modified On: 20 May 2026
+                                 ;  Purpose: To allow LED animations to be created with the OOTB uPAD, 
+                                 ;			OOTB SLB, and OOTB MB.
+                                 ;
+                                 ;  NOTE: The use of this file is NOT required! This file is just given
+                                 ;        as an example for how to potentially write code more effectively.
+                                 ;******************************************************************************
+                                 
+                                 ;*******INCLUDES*************************************
+                                 
+                                 ; The inclusion of the following file is REQUIRED for our course, since
+                                 ; it is intended that you understand concepts regarding how to specify an 
+                                 ; "include file" to an assembler. 
                                  .include "ATxmega128a1udef.inc"
                                  
                                  
@@ -6762,117 +6768,285 @@ C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab1\lab1
                                  
                                  
                                  
-                                 ;***********END OF INCLUDES******************************
-                                 ;*********************************EQUATES********************************
-                                 ; potentially useful expressions
-                                 .equ NULL = 0
-                                 .equ ThirtySeven = 3*7 + 37/3 - (3-7)  ; 21 + 12 + 4 = 37, our FAVORITE NUMBER OF ALL TIME
-                                 .equ InputTableStart = 0xABBA
-                                 .equ OutputTableStart = 0x3744
-                                 ;***********END OF EQUATES*******************************
-                                 ;***********MEMORY CONFIGURATION*************************
-                                 ; program memory constants (if necessary)
-                                 .cseg
-                                 .org InputTableStart ; As specified, the input table starts at 0xABBA
-                                 IN_TABLE:
-00abba 982f
-00abbb 23f0
-00abbc 98e4
-00abbd 44a2
-00abbe d247                      .db 47, 0x98, 0b11110000, '#', 228, 0b10011000, 0xA2, 0b01000100, 'G', 210
-00abbf 6728
-00abc0 e265                      .db	 '(', 0x67, 0145, 0xE2
-00abc1 00de                      .db 0b11011110, NULL ; important lesson! must put an even amount of terms per .db or you get a padding zero byte.
-                                 ; label below is used to calculate size of input table
-                                 IN_TABLE_END:
+                                 ;*******END OF INCLUDES******************************
                                  
-                                 ; data memory allocation (if necessary)
+                                 ;*******DEFINED SYMBOLS******************************
+                                 .equ ANIMATION_START_ADDR	=	0x2000 ; Start Address specified
+                                 .equ ANIMATION_SIZE			=	0x2000	; 0x2000 - 0x3FFF
+                                 ;*******END OF DEFINED SYMBOLS***********************
+                                 
+                                 ;*******MEMORY CONSTANTS*****************************
+                                 ; data memory allocation
                                  .dseg
-                                 ; initialize the output table starting address
-                                 .org OutputTableStart ; As specified, the output table starts at 0x3744
-                                 OUT_TABLE:
-003744                           .byte (IN_TABLE_END - IN_TABLE)
-                                 ;***********END OF MEMORY CONFIGURATION***************
-                                 ;***********MAIN PROGRAM*******************************
+                                 
+                                 .org ANIMATION_START_ADDR
+                                 ANIMATION:
+002000                           .byte ANIMATION_SIZE
+                                 ;*******END OF MEMORY CONSTANTS**********************
+                                 
+                                 ;*******MAIN PROGRAM*********************************
                                  .cseg
-                                 ; configure the reset vector 
-                                 ;	(ignore meaning of "reset vector" for now)
-                                 .org 0x0
+                                 ; upon system reset, jump to main program (instead of executing
+                                 ; instructions meant for interrupt vectors)
+                                 .org 0
 000000 c0ff                      	rjmp MAIN
                                  
-                                 ; place main program after interrupt vectors 
-                                 ;	(ignore meaning of "interrupt vectors" for now)
-                                 .org 0x100
+                                 ; place the main program somewhere after interrupt vectors (ignore for now)
+                                 .org 0x0100		; >= 0xFD
                                  MAIN:
-                                 ; point appropriate indices to input/output tables (is RAMP needed?)
-                                 ; ANSWER: yes, we need RAMP because we shift 16-bit values to the left
-                                 ;		  and A<<1 is greater than F, which means we will need a 16th bit
-000100 e7e4                      	ldi ZL, low(IN_TABLE << 1)
-000101 e5f7                      	ldi ZH, high(IN_TABLE << 1)
-000102 e001                      	ldi r16, byte3(IN_TABLE << 1) ; loads the overflowed value to the 3rd byte
-                                 								  ; for RAMPZ
-000103 bf0b                      	out CPU_RAMPZ, r16 ; sends loaded byte3 from r16 to RAMPZ
+                                 ; initialize the stack pointer
+000100 ef0f                      	ldi r16, low(RAMEND)
+000101 9300 003d                 	sts CPU_SPL, r16
+000103 e30f                      	ldi r16, high(RAMEND)
+000104 9300 003e                 	sts CPU_SPH, r16
+                                 ; initialize relevant I/O modules (switches and LEDs)
+000106 d05a                      	rcall IO_INIT
                                  
-                                 ; since our output starts at 0x3744, at it is already 8-bit, we do not shift
-000104 e4a4                      	ldi XL, low(OUT_TABLE)
-000105 e3b7                      	ldi XH, high(OUT_TABLE)
+                                 ; initialize (but do not start) the relevant timer/counter module(s)
+000107 d067                      	rcall TC_INIT
                                  
-                                 ; loop through input table, performing filtering and storing conditions
-                                 LOOP:
-                                 	; load value from input table into an appropriate register
-000106 9107                      	elpm r16, Z+ ;loads with extended addressing
-                                 	; determine if the end of table has been reached (perform general check)
-000107 3000                      	cpi r16, NULL ; compares r16 to null, if r16 = null = 0, we branch to done
-                                 	; if end of table (EOT) has been reached, i.e., the NULL character was 
-                                 	; encountered, the program should branch to the relevant label used to
-                                 	; terminate the program (e.g., DONE)
-000108 f079                      	breq DONE
+                                 ; Initialize the X and Y indices to point to the beginning of the 
+                                 ; animation table. (Although one pointer could be used to both
+                                 ; store frames and playback the current animation, it is simpler
+                                 ; to utilize a separate index for each of these operations.)
+                                 ; Note: recognize that the animation table is in DATA memory
                                  
-                                 	; if EOT was not encountered, perform the first specified 
-                                 	; overall conditional check on loaded value (CONDITION_1)
-                                 CHECK_1:
-                                 	; check if the CONDITION_1 is met (bit 7 of # is set); 
-                                 	;   if not, branch to FAILED_CHECK1
-000109 ff07                      	sbrs r16, 7 ; skips line below if bit 7 is SET
-00010a c007                      	rjmp FAILED_CHECK1 ; if bit 7 is not set, fail bit check and jump
+000108 e0a0                      	ldi XL, low(ANIMATION_START_ADDR)
+000109 e2b0                          ldi XH, high(ANIMATION_START_ADDR)
                                  
-                                 	; since the CONDITION_1 is met, perform the specified operation
-                                 	;   (divide # by 2, unsigned)
-00010b 9506                      	lsr r16
-                                 	; check if CONDITION_1a is met (result < 114); if so, then 
-                                 	;   jump to LESS_THAN_114; else store nothing and go back to LOOP
-00010c 3702                      	cpi r16, 114 ; compares r16 - 114, and sets the carry flag if r16 is less than 114
-00010d f008                      	brlo LESS_THAN_114 ; branches to LESS_THAN_114 if the compare above says so
-00010e cff7                      	rjmp LOOP
+00010a e0c0                          ldi YL, low(ANIMATION_START_ADDR)
+00010b e2d0                          ldi YH, high(ANIMATION_START_ADDR)
                                  
-                                 LESS_THAN_114:
-                                 	; add 3 and store the result
-00010f 5f0d                      	subi r16, -3 ; found online that we can use the immediate subtraction with a negative
-                                 				 ; to effectively give us immediate addition, we could also load r17
-                                 				 ; with 3, and add the two using 'add', but this is much quicker!
-000110 930d                      	st X+, r16 ; stores r16 to X, post-increments X
-000111 cff4                       	rjmp LOOP
+                                 ; begin main program loop 
                                  	
-                                 FAILED_CHECK1:
-                                 	; since the CONDITION_1 is NOT met (bit 7 of # is cleared),
-                                 	; check if CONDITION_2b is met (result >= 48); if so, jump to
-                                 	;    GREATER_EQUAL_48 (and do the next specified operation);
-                                 	;    else store nothing and go back to LOOP	
+                                 ; "EDIT" mode
+                                 EDIT:
+                                 	
+                                 ; Check if it is intended that "PLAY" mode be started, i.e.,
+                                 ; determine if the relevant switch has been pressed.
                                  
-000112 3300                      	cpi r16, 48
-000113 f408                      	brsh GREATER_EQUAL_48 ; branches if r16 is the same or higher than 48
-000114 cff1                      	rjmp LOOP
+00010c 9100 06a8                 lds r16, PORTF_IN ; Read the input from S1 on the SLB to go to PLAY (PF2)
+                                 
+                                 ; If it is determined that relevant switch was pressed, 
+                                 ; go to "PLAY" mode.
+00010e ff02                      sbrs r16, 2 ; active low, if the bit is set it is not pressed
+00010f c025                      rjmp PLAY ; skip if not pressed
+                                 
+                                 ; Otherwise, if the "PLAY" mode switch was not pressed,
+                                 ; update display LEDs with the voltage values from relevant DIP switches
+                                 ; and check if it is intended that a frame be stored in the animation
+                                 ; (determine if this relevant switch has been pressed).
+                                 
+000110 9110 0608                 lds r17, PORTA_IN ; take inputs, place in outputs
+000112 9310 0644                 sts PORTC_OUT, r17
+                                 
+000114 fd03                      sbrc r16, 3 ; Skip loop to EDIt if S2 on SLB is pressed, which is PF3
+                                 
+                                 ; If the "STORE_FRAME" switch was not pressed,
+                                 ; branch back to "EDIT".
+                                 
+000115 cff6                      rjmp EDIT
+                                 
+                                 ; Otherwise, if it was determined that relevant switch was pressed,
+                                 ; perform debouncing process, e.g., start relevant timer/counter
+                                 ; and wait for it to overflow. (Write to CTRLA and loop until
+                                 ; the OVFIF flag within INTFLAGS is set.)
+                                 
+000116 e90c                      ldi r16, low(156)
+000117 9300 0826                 sts TCC0_PER, r16
+000119 e000                      ldi r16, high(156)
+00011a 9300 0827                 sts TCC0_PER+1, r16 
+                                 ; 5ms at DIV64, longest recorded bounce was 1.5ms, 3.5ms buffer
+                                 
+00011c e005                      ldi r16, TC_CLKSEL_DIV64_gc
+00011d 9300 0800                 sts TCC0_CTRLA, r16
+                                 
+                                 DEBOUNCE_LOOP:
+                                 
+00011f 9100 080c                 lds r16, TCC0_INTFLAGS
+000121 ff00                      sbrs r16, 0
+000122 cffc                      rjmp DEBOUNCE_LOOP
                                  	
-                                 GREATER_EQUAL_48:
-                                 	; subtract 2 and store the result 
-000115 5002                      	subi r16, 2 ; immediately subtracts 2 from r16
-000116 930d                      	st X+, r16 ; stores r16 to X, post-increments X
-                                 	;go back to LOOP
-000117 cfee                      	rjmp LOOP
+                                 ; After relevant timer/counter has overflowed (i.e., after
+                                 ; the relevant debounce period), disable this timer/counter,
+                                 ; clear the relevant timer/counter OVFIF flag,
+                                 ; and then read switch value again to verify that it was
+                                 ; actually pressed. If so, perform intended functionality, and
+                                 ; otherwise, do not; however, in both cases, wait for switch to
+                                 ; be released before jumping back to "EDIT".
+                                 
+000123 e000                      ldi r16, TC_CLKSEL_OFF_gc ; turn off timer
+000124 9300 0800                 sts TCC0_CTRLA, r16
+                                 
+                                 ; clear OVFIF
+000126 e001                      ldi r16, 1 ; setting bit 0 clears OVFIF for TCC0
+000127 9300 080c                 sts TCC0_INTFLAGS, r16
+                                 
+                                 ; read S2 on SLB (PF3) again to ensure it is still pressed; i.e. not bounce
+000129 9100 06a8                 lds r16, PORTF_IN
+00012b fd03                      sbrc r16, 3 ; skip if it is still pressed
+00012c cfdf                      rjmp EDIT ; if not still pressed, stay in EDIT
+                                 
+                                 ; Store DIP switches to memory
+00012d 9110 0608                 lds r17, PORTA_IN
+00012f 9319                      st Y+, r17
+                                 
+                                 ; Wait for the "STORE FRAME" switch to be released
+                                 ; before jumping to "EDIT".
+                                 STORE_FRAME_SWITCH_RELEASE_WAIT_LOOP: ; this is S2 on the SLB; PF3 again
+                                 
+000130 9100 06a8                 lds r16, PORTF_IN 
+000132 ff03                      sbrs r16, 3 ; skip if not pressed, i.e. action is done
+000133 cffc                      rjmp STORE_FRAME_SWITCH_RELEASE_WAIT_LOOP
+                                 
+000134 cfd7                      rjmp EDIT
                                  	
-                                 ; end of program (infinite loop)
+                                 ; "PLAY" mode
+                                 PLAY:
+                                 
+                                 ; Reload the relevant index to the first memory location
+                                 ; within the animation table to play animation from first frame.
+000135 e0a0                      	ldi XL, low(ANIMATION_START_ADDR)
+000136 e2b0                      	ldi XH, high(ANIMATION_START_ADDR)
+                                 
+                                 PLAY_LOOP:
+                                 
+                                 ; Check if it is intended that "EDIT" mode be started
+                                 ; i.e., check if the relevant switch has been pressed.`
+                                 
+000137 9100 0688                 lds r16, PORTE_IN
+                                 
+                                 ; If it is determined that relevant switch was pressed, 
+                                 ; go to "EDIT" mode.
+                                 
+                                 ; S2 on OOTB MB (E1)
+000139 ff01                      sbrs r16, 1 ; Check if unpressed
+00013a cfd1                      rjmp EDIT
+                                 
+                                 ; Otherwise, if the "EDIT" mode switch was not pressed,
+                                 ; determine if index used to load frames has the same
+                                 ; address as the index used to store frames, i.e., if the end
+                                 ; of the animation has been reached during playback.
+                                 ; (Placing this check here will allow animations of all sizes,
+                                 ; including zero, to playback properly.)
+                                 ; To efficiently determine if these index values are equal,
+                                 ; a combination of the "CP" and "CPC" instructions is recommended.
+                                 
+00013b 17ac                      cp XL, YL ; compares the input/output tables
+00013c 07bd                      cpc XH, YH
+                                 
+                                 ; If index values are equal, branch back to "PLAY" to
+                                 ; restart the animation.
+                                 
+00013d f3b9                      breq PLAY
+                                 
+                                 ; Otherwise, load animation frame from table, 
+                                 ; display this "frame" on the relevant LEDs,
+                                 ; start relevant timer/counter,
+                                 ; wait until this timer/counter overflows (to more or less
+                                 ; achieve the "frame rate"), and then after the overflow,
+                                 ; stop the timer/counter,
+                                 ; clear the relevant OVFIF flag,
+                                 ; and then jump back to "PLAY_LOOP".
+                                 
+00013e 911d                      ld r17, X+ ; load from our animation table, post-increment
+00013f 9310 0644                 sts PORTC_OUT, r17 ; load to LEDs
+                                 
+000141 e129                      ldi r18, low(1561) 
+000142 9320 0826                 sts TCC0_PER, r18
+000144 e026                      ldi r18, high(1561)
+000145 9320 0827                 sts TCC0_PER+1, r18
+                                 
+000147 e026                      ldi r18, TC_CLKSEL_DIV256_gc ; 1562 ticks with a prescaler of 256
+000148 9320 0800                 sts TCC0_CTRLA, r18          ; ~= to 5Hz or 200ms period
+                                 
+                                 PLAY_DELAY:
+00014a 9100 0688                 lds r16, PORTE_IN 
+00014c ff01                      sbrs r16, 1 ; S2 on OOTB MB = PE1, if pressed, QUIT
+00014d c00b                      rjmp QUIT
+                                 
+00014e 9120 080c                 lds r18, TCC0_INTFLAGS
+000150 ff20                      sbrs r18, 0
+000151 cff8                      rjmp PLAY_DELAY ; delay to 5Hz update speed
+                                 
+000152 e020                      ldi r18, TC_CLKSEL_OFF_gc ; turn off timer
+000153 9320 0800                 sts TCC0_CTRLA, r18
+                                 
+000155 e021                      ldi r18, 1 ; clear flag
+000156 9320 080c                 sts TCC0_INTFLAGS, r18
+000158 cfde                      rjmp PLAY_LOOP
+                                 
+                                 QUIT:
+                                 
+000159 e020                      ldi r18, TC_CLKSEL_OFF_gc ; turn off timer
+00015a 9320 0800                 sts TCC0_CTRLA, r18
+00015c e021                      ldi r18, 1 ; clear flag
+00015d 9320 080c                 sts TCC0_INTFLAGS, r18
+00015f cfac                      rjmp EDIT ; go back to edit mode
+                                 
+                                 ; end of program (never reached)
                                  DONE: 
-000118 cfff                      	rjmp DONE
+000160 cfff                      	rjmp DONE
+                                 ;*******END OF MAIN PROGRAM *************************
+                                 
+                                 ;*******SUBROUTINES**********************************
+                                 
+                                 ;****************************************************
+                                 ; Name: IO_INIT 
+                                 ; Purpose: To initialize the relevant input/output modules, as pertains to the
+                                 ;		   application.
+                                 ; Input(s): N/A
+                                 ; Output: N/A
+                                 ;****************************************************
+                                 IO_INIT:
+                                 ; protect relevant registers
+                                 
+000161 930f                      push r16
+                                 
+                                 ; initialize the relevant I/O
+                                 
+000162 ef0f                      ldi r16, 0xFF
+000163 9300 0641                 sts PORTC_DIRSET, r16 ; set all bits, making PORTC LED's outputs
+000165 9300 0602                 sts PORTA_DIRCLR, r16 ; clr all bits, making PORTC switches inputs
+                                 
+000167 e00c                      ldi r16, 0b00001100 ; set relevant PORTF tactile switches to inputs
+000168 9300 06a2                 sts PORTF_DIRCLR, r16
+                                 
+00016a e002                      ldi r16, 0b00000010 ; set relevant PORTE tactile switches to inputs
+00016b 9300 0682                 sts PORTE_DIRCLR, r16
+                                 
+                                 ; recover relevant registers
+                                 	
+00016d 910f                      pop r16
+                                 
+                                 ; return from subroutine
+00016e 9508                      	ret
+                                 ;****************************************************
+                                 ; Name: TC_INIT 
+                                 ; Purpose: To initialize the relevant timer/counter modules, as pertains to
+                                 ;		   application.
+                                 ; Input(s): N/A
+                                 ; Output: N/A
+                                 ;****************************************************
+                                 TC_INIT:
+                                 ; protect relevant registers
+                                 
+00016f 930f                      push r16
+                                 
+                                 ; initialize the relevant TC modules
+                                 
+000170 e90c                      ldi r16, low(156)
+000171 9300 0826                 sts TCC0_PER, r16
+000173 e000                      ldi r16, high(156)
+000174 9300 0827                 sts TCC0_PER+1, r16
+                                 	
+                                 ; recover relevant registers
+                                 
+000176 910f                      pop r16
+                                 	
+                                 ; return from subroutine
+000177 9508                      	ret
+                                 
 
 
 RESOURCE USE INFORMATION
@@ -6890,42 +7064,42 @@ counted separately from r26..r31 here.
 .dseg memory usage only counts static data declared with .byte
 
 "ATxmega128A1U" register use summary:
-x  :   2 y  :   0 z  :   1 r0 :   0 r1 :   0 r2 :   0 r3 :   0 r4 :   0 
+x  :   1 y  :   1 z  :   0 r0 :   0 r1 :   0 r2 :   0 r3 :   0 r4 :   0 
 r5 :   0 r6 :   0 r7 :   0 r8 :   0 r9 :   0 r10:   0 r11:   0 r12:   0 
-r13:   0 r14:   0 r15:   0 r16:  12 r17:   0 r18:   0 r19:   0 r20:   0 
-r21:   0 r22:   0 r23:   0 r24:   0 r25:   0 r26:   1 r27:   1 r28:   0 
-r29:   0 r30:   1 r31:   1 
-Registers used: 7 out of 35 (20.0%)
+r13:   0 r14:   0 r15:   0 r16:  42 r17:   6 r18:  16 r19:   0 r20:   0 
+r21:   0 r22:   0 r23:   0 r24:   0 r25:   0 r26:   3 r27:   3 r28:   2 
+r29:   2 r30:   0 r31:   0 
+Registers used: 9 out of 35 (25.7%)
 
 "ATxmega128A1U" instruction use summary:
 .lds  :   0 .sts  :   0 adc   :   0 add   :   0 adiw  :   0 and   :   0 
 andi  :   0 asr   :   0 bclr  :   0 bld   :   0 brbc  :   0 brbs  :   0 
 brcc  :   0 brcs  :   0 break :   0 breq  :   1 brge  :   0 brhc  :   0 
-brhs  :   0 brid  :   0 brie  :   0 brlo  :   1 brlt  :   0 brmi  :   0 
-brne  :   0 brpl  :   0 brsh  :   1 brtc  :   0 brts  :   0 brvc  :   0 
+brhs  :   0 brid  :   0 brie  :   0 brlo  :   0 brlt  :   0 brmi  :   0 
+brne  :   0 brpl  :   0 brsh  :   0 brtc  :   0 brts  :   0 brvc  :   0 
 brvs  :   0 bset  :   0 bst   :   0 call  :   0 cbi   :   0 cbr   :   0 
 clc   :   0 clh   :   0 cli   :   0 cln   :   0 clr   :   0 cls   :   0 
-clt   :   0 clv   :   0 clz   :   0 com   :   0 cp    :   0 cpc   :   0 
-cpi   :   3 cpse  :   0 dec   :   0 des   :   0 eicall:   0 eijmp :   0 
-elpm  :   1 eor   :   0 fmul  :   0 fmuls :   0 fmulsu:   0 icall :   0 
+clt   :   0 clv   :   0 clz   :   0 com   :   0 cp    :   1 cpc   :   1 
+cpi   :   0 cpse  :   0 dec   :   0 des   :   0 eicall:   0 eijmp :   0 
+elpm  :   0 eor   :   0 fmul  :   0 fmuls :   0 fmulsu:   0 icall :   0 
 ijmp  :   0 in    :   0 inc   :   0 jmp   :   0 lac   :   0 las   :   0 
-lat   :   0 ld    :   0 ldd   :   0 ldi   :   5 lds   :   0 lpm   :   0 
-lsl   :   0 lsr   :   1 mov   :   0 movw  :   0 mul   :   0 muls  :   0 
-mulsu :   0 neg   :   0 nop   :   0 or    :   0 ori   :   0 out   :   1 
-pop   :   0 push  :   0 rcall :   0 ret   :   0 reti  :   0 rjmp  :   7 
+lat   :   0 ld    :   1 ldd   :   0 ldi   :  25 lds   :   9 lpm   :   0 
+lsl   :   0 lsr   :   0 mov   :   0 movw  :   0 mul   :   0 muls  :   0 
+mulsu :   0 neg   :   0 nop   :   0 or    :   0 ori   :   0 out   :   0 
+pop   :   2 push  :   2 rcall :   2 ret   :   2 reti  :   0 rjmp  :  13 
 rol   :   0 ror   :   0 sbc   :   0 sbci  :   0 sbi   :   0 sbic  :   0 
-sbis  :   0 sbiw  :   0 sbr   :   0 sbrc  :   0 sbrs  :   1 sec   :   0 
+sbis  :   0 sbiw  :   0 sbr   :   0 sbrc  :   2 sbrs  :   6 sec   :   0 
 seh   :   0 sei   :   0 sen   :   0 ser   :   0 ses   :   0 set   :   0 
-sev   :   0 sez   :   0 sleep :   0 spm   :   0 st    :   2 std   :   0 
-sts   :   0 sub   :   0 subi  :   2 swap  :   0 tst   :   0 wdr   :   0 
+sev   :   0 sez   :   0 sleep :   0 spm   :   0 st    :   1 std   :   0 
+sts   :  22 sub   :   0 subi  :   0 swap  :   0 tst   :   0 wdr   :   0 
 xch   :   0 
-Instructions used: 12 out of 121 (9.9%)
+Instructions used: 15 out of 121 (12.4%)
 
 "ATxmega128A1U" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x015784     52     16     68  139264   0.0%
-[.dseg] 0x002000 0x00374c      0      8      8    8192   0.1%
+[.cseg] 0x000000 0x0002f0    242      0    242  139264   0.2%
+[.dseg] 0x002000 0x004000      0   8192   8192    8192 100.0%
 [.eseg] 0x000000 0x000000      0      0      0    2048   0.0%
 
 Assembly complete, 0 errors, 0 warnings

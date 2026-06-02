@@ -1,10 +1,10 @@
 
-AVRASM ver. 2.2.8  C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab1\lab1\main.asm Sun May 31 14:51:23 2026
+AVRASM ver. 2.2.8  C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab2\lab2_1\lab2_1\main.asm Thu May 28 14:27:35 2026
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.3.146\avrasm\inc\ATxmega128A1Udef.inc'
-C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab1\lab1\main.asm(19): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.3.146\avrasm\inc\ATxmega128a1udef.inc'
+C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab2\lab2_1\lab2_1\main.asm(23): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.3.146\avrasm\inc\ATxmega128A1Udef.inc'
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.3.146\avrasm\inc\ATxmega128A1Udef.inc'
-C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab1\lab1\main.asm(19): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.3.146\avrasm\inc\ATxmega128a1udef.inc'
+C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab2\lab2_1\lab2_1\main.asm(23): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.3.146\avrasm\inc\ATxmega128A1Udef.inc'
                                  
                                  ;
                                  
@@ -6715,24 +6715,28 @@ C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab1\lab1
                                  
                                  
                                  
-                                 ; lab1.asm
+                                 ; lab2_1.asm
                                  ;
-                                 ; Created: 5/24/2026 6:45:58 PM
+                                 ; Created: 5/28/2026 10:20:43 AM
                                  ; Author : Evan Baesler
-                                 ;
-                                 ; Replace with your application code:
                                  
-                                 ;************************************************************************
-                                 ;  File name: lab1.asm
-                                 ;  Author:  Christopher Crary
-                                 ;  Last Modified By: Dr. Schwartz
-                                 ;  Last Modified On: 15 May 2026
-                                 ;  Description: To filter data stored within a predefined input table 
-                                 ;				based on a set of given conditions and store 
-                                 ;				a subset of filtered values into an output table.
-                                 ;************************************************************************
-                                 ;*********************************INCLUDES*******************************
-                                 .include "ATxmega128a1udef.inc"
+                                 ; ABSTRACT: This program functions as an endless loop, outputting
+                                 ;           the values of a our DIP switch circuits on the OOTB uPAD
+                                 ;           to their respective LED's, if an input switch is closed
+                                 ;           the LED illuminates, vice versa
+                                 
+                                 ; NOTES: This program is made to be used with the OOTB uPAD and the
+                                 ;        Switch and LED backpack.
+                                 
+                                 ; OBJECTIVES:
+                                 ; (1) Designate I/O, the uPAD utilizes PA for our DIP switches, and PC
+                                 ;     for our LED circuits
+                                 ; (2) For active-low LED's, we must turn the output to 0 when we want
+                                 ;     illumination. Which given the constraints of the switch being
+                                 ;     closed, means we must have the LED read a 0 when the switch
+                                 ;     outputs a 1.
+                                 
+                                 .include "ATxmega128A1Udef.inc"
                                  
                                  
                                  ;*************************************************************************
@@ -6762,117 +6766,26 @@ C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab1\lab1
                                  
                                  
                                  
-                                 ;***********END OF INCLUDES******************************
-                                 ;*********************************EQUATES********************************
-                                 ; potentially useful expressions
-                                 .equ NULL = 0
-                                 .equ ThirtySeven = 3*7 + 37/3 - (3-7)  ; 21 + 12 + 4 = 37, our FAVORITE NUMBER OF ALL TIME
-                                 .equ InputTableStart = 0xABBA
-                                 .equ OutputTableStart = 0x3744
-                                 ;***********END OF EQUATES*******************************
-                                 ;***********MEMORY CONFIGURATION*************************
-                                 ; program memory constants (if necessary)
-                                 .cseg
-                                 .org InputTableStart ; As specified, the input table starts at 0xABBA
-                                 IN_TABLE:
-00abba 982f
-00abbb 23f0
-00abbc 98e4
-00abbd 44a2
-00abbe d247                      .db 47, 0x98, 0b11110000, '#', 228, 0b10011000, 0xA2, 0b01000100, 'G', 210
-00abbf 6728
-00abc0 e265                      .db	 '(', 0x67, 0145, 0xE2
-00abc1 00de                      .db 0b11011110, NULL ; important lesson! must put an even amount of terms per .db or you get a padding zero byte.
-                                 ; label below is used to calculate size of input table
-                                 IN_TABLE_END:
                                  
-                                 ; data memory allocation (if necessary)
-                                 .dseg
-                                 ; initialize the output table starting address
-                                 .org OutputTableStart ; As specified, the output table starts at 0x3744
-                                 OUT_TABLE:
-003744                           .byte (IN_TABLE_END - IN_TABLE)
-                                 ;***********END OF MEMORY CONFIGURATION***************
-                                 ;***********MAIN PROGRAM*******************************
                                  .cseg
-                                 ; configure the reset vector 
-                                 ;	(ignore meaning of "reset vector" for now)
-                                 .org 0x0
-000000 c0ff                      	rjmp MAIN
+                                 .org 0
+000000 c000                      rjmp MAIN
                                  
-                                 ; place main program after interrupt vectors 
-                                 ;	(ignore meaning of "interrupt vectors" for now)
-                                 .org 0x100
                                  MAIN:
-                                 ; point appropriate indices to input/output tables (is RAMP needed?)
-                                 ; ANSWER: yes, we need RAMP because we shift 16-bit values to the left
-                                 ;		  and A<<1 is greater than F, which means we will need a 16th bit
-000100 e7e4                      	ldi ZL, low(IN_TABLE << 1)
-000101 e5f7                      	ldi ZH, high(IN_TABLE << 1)
-000102 e001                      	ldi r16, byte3(IN_TABLE << 1) ; loads the overflowed value to the 3rd byte
-                                 								  ; for RAMPZ
-000103 bf0b                      	out CPU_RAMPZ, r16 ; sends loaded byte3 from r16 to RAMPZ
                                  
-                                 ; since our output starts at 0x3744, at it is already 8-bit, we do not shift
-000104 e4a4                      	ldi XL, low(OUT_TABLE)
-000105 e3b7                      	ldi XH, high(OUT_TABLE)
+000001 ef0f                      ldi r16, 0b11111111 ; Loading a mask to cover PA as input
+000002 9300 0602                 sts PORTA_DIRCLR, r16 ; Sets DIR for PORTA pins to 0b00000000, making
+                                                       ; them all inputs
                                  
-                                 ; loop through input table, performing filtering and storing conditions
-                                 LOOP:
-                                 	; load value from input table into an appropriate register
-000106 9107                      	elpm r16, Z+ ;loads with extended addressing
-                                 	; determine if the end of table has been reached (perform general check)
-000107 3000                      	cpi r16, NULL ; compares r16 to null, if r16 = null = 0, we branch to done
-                                 	; if end of table (EOT) has been reached, i.e., the NULL character was 
-                                 	; encountered, the program should branch to the relevant label used to
-                                 	; terminate the program (e.g., DONE)
-000108 f079                      	breq DONE
+000004 9300 0641                 sts PORTC_DIRSET, r16 ; Sets DIR for PORTC pins to 0b11111111 making
+                                 					  ; them all outputs
                                  
-                                 	; if EOT was not encountered, perform the first specified 
-                                 	; overall conditional check on loaded value (CONDITION_1)
-                                 CHECK_1:
-                                 	; check if the CONDITION_1 is met (bit 7 of # is set); 
-                                 	;   if not, branch to FAILED_CHECK1
-000109 ff07                      	sbrs r16, 7 ; skips line below if bit 7 is SET
-00010a c007                      	rjmp FAILED_CHECK1 ; if bit 7 is not set, fail bit check and jump
+000006 9100 0608                 lds r16, PORTA_IN
                                  
-                                 	; since the CONDITION_1 is met, perform the specified operation
-                                 	;   (divide # by 2, unsigned)
-00010b 9506                      	lsr r16
-                                 	; check if CONDITION_1a is met (result < 114); if so, then 
-                                 	;   jump to LESS_THAN_114; else store nothing and go back to LOOP
-00010c 3702                      	cpi r16, 114 ; compares r16 - 114, and sets the carry flag if r16 is less than 114
-00010d f008                      	brlo LESS_THAN_114 ; branches to LESS_THAN_114 if the compare above says so
-00010e cff7                      	rjmp LOOP
+000008 9300 0644                 sts PORTC_OUT, r16
                                  
-                                 LESS_THAN_114:
-                                 	; add 3 and store the result
-00010f 5f0d                      	subi r16, -3 ; found online that we can use the immediate subtraction with a negative
-                                 				 ; to effectively give us immediate addition, we could also load r17
-                                 				 ; with 3, and add the two using 'add', but this is much quicker!
-000110 930d                      	st X+, r16 ; stores r16 to X, post-increments X
-000111 cff4                       	rjmp LOOP
-                                 	
-                                 FAILED_CHECK1:
-                                 	; since the CONDITION_1 is NOT met (bit 7 of # is cleared),
-                                 	; check if CONDITION_2b is met (result >= 48); if so, jump to
-                                 	;    GREATER_EQUAL_48 (and do the next specified operation);
-                                 	;    else store nothing and go back to LOOP	
+00000a cff6                      rjmp MAIN
                                  
-000112 3300                      	cpi r16, 48
-000113 f408                      	brsh GREATER_EQUAL_48 ; branches if r16 is the same or higher than 48
-000114 cff1                      	rjmp LOOP
-                                 	
-                                 GREATER_EQUAL_48:
-                                 	; subtract 2 and store the result 
-000115 5002                      	subi r16, 2 ; immediately subtracts 2 from r16
-000116 930d                      	st X+, r16 ; stores r16 to X, post-increments X
-                                 	;go back to LOOP
-000117 cfee                      	rjmp LOOP
-                                 	
-                                 ; end of program (infinite loop)
-                                 DONE: 
-000118 cfff                      	rjmp DONE
 
 
 RESOURCE USE INFORMATION
@@ -6890,42 +6803,42 @@ counted separately from r26..r31 here.
 .dseg memory usage only counts static data declared with .byte
 
 "ATxmega128A1U" register use summary:
-x  :   2 y  :   0 z  :   1 r0 :   0 r1 :   0 r2 :   0 r3 :   0 r4 :   0 
+x  :   0 y  :   0 z  :   0 r0 :   0 r1 :   0 r2 :   0 r3 :   0 r4 :   0 
 r5 :   0 r6 :   0 r7 :   0 r8 :   0 r9 :   0 r10:   0 r11:   0 r12:   0 
-r13:   0 r14:   0 r15:   0 r16:  12 r17:   0 r18:   0 r19:   0 r20:   0 
-r21:   0 r22:   0 r23:   0 r24:   0 r25:   0 r26:   1 r27:   1 r28:   0 
-r29:   0 r30:   1 r31:   1 
-Registers used: 7 out of 35 (20.0%)
+r13:   0 r14:   0 r15:   0 r16:   5 r17:   0 r18:   0 r19:   0 r20:   0 
+r21:   0 r22:   0 r23:   0 r24:   0 r25:   0 r26:   0 r27:   0 r28:   0 
+r29:   0 r30:   0 r31:   0 
+Registers used: 1 out of 35 (2.9%)
 
 "ATxmega128A1U" instruction use summary:
 .lds  :   0 .sts  :   0 adc   :   0 add   :   0 adiw  :   0 and   :   0 
 andi  :   0 asr   :   0 bclr  :   0 bld   :   0 brbc  :   0 brbs  :   0 
-brcc  :   0 brcs  :   0 break :   0 breq  :   1 brge  :   0 brhc  :   0 
-brhs  :   0 brid  :   0 brie  :   0 brlo  :   1 brlt  :   0 brmi  :   0 
-brne  :   0 brpl  :   0 brsh  :   1 brtc  :   0 brts  :   0 brvc  :   0 
+brcc  :   0 brcs  :   0 break :   0 breq  :   0 brge  :   0 brhc  :   0 
+brhs  :   0 brid  :   0 brie  :   0 brlo  :   0 brlt  :   0 brmi  :   0 
+brne  :   0 brpl  :   0 brsh  :   0 brtc  :   0 brts  :   0 brvc  :   0 
 brvs  :   0 bset  :   0 bst   :   0 call  :   0 cbi   :   0 cbr   :   0 
 clc   :   0 clh   :   0 cli   :   0 cln   :   0 clr   :   0 cls   :   0 
 clt   :   0 clv   :   0 clz   :   0 com   :   0 cp    :   0 cpc   :   0 
-cpi   :   3 cpse  :   0 dec   :   0 des   :   0 eicall:   0 eijmp :   0 
-elpm  :   1 eor   :   0 fmul  :   0 fmuls :   0 fmulsu:   0 icall :   0 
+cpi   :   0 cpse  :   0 dec   :   0 des   :   0 eicall:   0 eijmp :   0 
+elpm  :   0 eor   :   0 fmul  :   0 fmuls :   0 fmulsu:   0 icall :   0 
 ijmp  :   0 in    :   0 inc   :   0 jmp   :   0 lac   :   0 las   :   0 
-lat   :   0 ld    :   0 ldd   :   0 ldi   :   5 lds   :   0 lpm   :   0 
-lsl   :   0 lsr   :   1 mov   :   0 movw  :   0 mul   :   0 muls  :   0 
-mulsu :   0 neg   :   0 nop   :   0 or    :   0 ori   :   0 out   :   1 
-pop   :   0 push  :   0 rcall :   0 ret   :   0 reti  :   0 rjmp  :   7 
+lat   :   0 ld    :   0 ldd   :   0 ldi   :   1 lds   :   1 lpm   :   0 
+lsl   :   0 lsr   :   0 mov   :   0 movw  :   0 mul   :   0 muls  :   0 
+mulsu :   0 neg   :   0 nop   :   0 or    :   0 ori   :   0 out   :   0 
+pop   :   0 push  :   0 rcall :   0 ret   :   0 reti  :   0 rjmp  :   2 
 rol   :   0 ror   :   0 sbc   :   0 sbci  :   0 sbi   :   0 sbic  :   0 
-sbis  :   0 sbiw  :   0 sbr   :   0 sbrc  :   0 sbrs  :   1 sec   :   0 
+sbis  :   0 sbiw  :   0 sbr   :   0 sbrc  :   0 sbrs  :   0 sec   :   0 
 seh   :   0 sei   :   0 sen   :   0 ser   :   0 ses   :   0 set   :   0 
-sev   :   0 sez   :   0 sleep :   0 spm   :   0 st    :   2 std   :   0 
-sts   :   0 sub   :   0 subi  :   2 swap  :   0 tst   :   0 wdr   :   0 
+sev   :   0 sez   :   0 sleep :   0 spm   :   0 st    :   0 std   :   0 
+sts   :   3 sub   :   0 subi  :   0 swap  :   0 tst   :   0 wdr   :   0 
 xch   :   0 
-Instructions used: 12 out of 121 (9.9%)
+Instructions used: 4 out of 121 (3.3%)
 
 "ATxmega128A1U" memory use summary [bytes]:
 Segment   Begin    End      Code   Data   Used    Size   Use%
 ---------------------------------------------------------------
-[.cseg] 0x000000 0x015784     52     16     68  139264   0.0%
-[.dseg] 0x002000 0x00374c      0      8      8    8192   0.1%
+[.cseg] 0x000000 0x000016     22      0     22  139264   0.0%
+[.dseg] 0x002000 0x002000      0      0      0    8192   0.0%
 [.eseg] 0x000000 0x000000      0      0      0    2048   0.0%
 
 Assembly complete, 0 errors, 0 warnings

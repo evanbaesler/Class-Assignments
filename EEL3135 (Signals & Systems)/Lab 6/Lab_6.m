@@ -40,16 +40,80 @@ title ( ' After System 3 ')
 
 %% Exercise 6.2
 
-z2 = load('lighthouse.mat');
-data = z2.xx;
+lighthouse = load('lighthouse.mat');
+data = lighthouse.xx;
 
 [xs, ys, zf] = image_sample(data, 2);
 
-figure(2);
+figure;
 imagesc(xs, ys, zf);
 colormap(gray);
 axis image;
-title('Lighthouse');
+title('Lighthouse Sampled');
+
+% Part D/E
+
+data_aa = image_antialias(data);
+data_aax6 = data;
+
+for i = 1:6
+
+    data_aax6 = image_antialias(data_aax6);
+
+end
+
+% Part E/F
+
+[xz, yz, lighthouse_zeros] = image_insertzeros(data_aa, 2);
+
+lighthouse_interpolated = lighthouse_zeros;
+for i = 1:6
+    lighthouse_interpolated = image_antialias(lighthouse_interpolated);
+end
+
+% Part D
+
+figure;
+subplot(1,4,1);
+imshow(data);
+title('Original');
+subplot(1,4,2);
+imagesc(xs, ys, zf);
+colormap(gray);
+axis image;
+title('Sampled');
+subplot(1,4,3);
+imshow(data_aa);
+title('Anti Aliased (1x)')
+subplot(1,4,4);
+imshow(data_aax6);
+title('Anti Aliased (6x)')
+
+% Antialiasing smooths edges and causes blur, good for removing sharp
+% edges, and functions by averaging the weight of the pixel sampled with
+% pixels in immediate contact. Useful for rendering games to reduce jagged
+% edges.
+
+% Part F
+
+figure;
+subplot(1,3,1);
+imshow(data);
+title('Original');
+subplot(1,3,2);
+imagesc(xs, ys,lighthouse_zeros);
+colormap(gray);
+axis image;
+title('Ligthouse Zeros');
+subplot(1,3,3);
+imshow(lighthouse_interpolated);
+title('Interpolated')
+
+% The zeros function causes a grid pattern over the image to be removed,
+% and interpolation refills this in by averaging the values of nearby
+% pixels, causing the smoothest look, although it does cause the saturation
+% range to shrink, which can be beneficial if you want a homogenous look,
+% but might cause issues when the difference is important.
 
 %% Functions
 
@@ -107,8 +171,27 @@ function [xs, ys, zs] = image_sample(z, D)
 
 end
 
-function [zaa, x, y] = image_antialias(z, x2, y2)
+function zaa = image_antialias(z)
 
+    [M, N] = size(z);
+    zaa = z;
     
+    for y = 2:M-1
+        for x = 2:N-1
+            zaa(y, x) = 0.5*z(y, x) + 0.125*(z(y-1, x) + z(y+1, x) + z(y, x-1) + z(y, x+1));
+        end
+    end
+
+end
+
+function [ xz , yz , zz ] = image_insertzeros (zaas , U)
+
+    [M, N] = size(zaas);
+    Mz = M + (M-1)*(U-1);
+    Nz = N + (N-1)*(U-1);
+    zz = zeros(Mz, Nz);
+    zz(1:U:end, 1:U:end) = zaas;
+    xz = 1:Nz;
+    yz = 1:Mz;
 
 end

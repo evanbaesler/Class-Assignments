@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab2/lab2_MUX_TEST/simulation/qsim
 vhard_block
-Z1 !s110 1771230650
+Z1 !s110 1780589149
 !i10b 1
 !s100 4XU7aIE@Y^PK=Xb5>oDB21
 I7fo9Y[fS]JeK;bjV2>WYi0
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1771230649
+Z3 w1780589148
 Z4 8lab2_MUX_TEST.vo
 Z5 Flab2_MUX_TEST.vo
 L0 346
@@ -23,7 +23,7 @@ Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1771230650.000000
+Z7 !s108 1780589149.000000
 Z8 !s107 lab2_MUX_TEST.vo|
 Z9 !s90 -work|work|lab2_MUX_TEST.vo|
 !i113 1
@@ -54,11 +54,11 @@ nlab2_@m@u@x_@t@e@s@t
 vlab2_MUX_TEST_vlg_vec_tst
 R1
 !i10b 1
-!s100 X9>ENmVn@YU<OF67JQNDQ2
-I9hLam0=z5ia8:Hm?WT^Xk0
+!s100 [VmG?2Dk5b<2dA=OU7QHe0
+I1MQ4mY03^:19[XziISBXX0
 R2
 R0
-w1771230647
+R3
 8Waveform.vwf.vt
 FWaveform.vwf.vt
 L0 30

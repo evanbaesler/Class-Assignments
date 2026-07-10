@@ -21,6 +21,7 @@ after 2500 simTimestamp
 run -all
 quit -f
 
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -39,6 +40,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 
 </modelsim_script_timing>
 <hdl_lang>verilog</hdl_lang>
@@ -158,14 +160,27 @@ SIGNAL("Y")
 	PARENT = "";
 }
 
+GROUP("Select_Line")
+{
+	MEMBERS = "A", "B";
+}
+
+GROUP("InputOptions")
+{
+	MEMBERS = "X0", "X1", "X2", "X3";
+}
+
 TRANSITION_LIST("A")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 980.0;
+		NODE
+		{
+			REPEAT = 25;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
+		}
 	}
 }
 
@@ -174,8 +189,12 @@ TRANSITION_LIST("B")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 990.0;
+		NODE
+		{
+			REPEAT = 50;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+		}
 	}
 }
 
@@ -184,9 +203,7 @@ TRANSITION_LIST("T_L")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 960.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -195,9 +212,13 @@ TRANSITION_LIST("X0")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 970.0;
+		NODE
+		{
+			REPEAT = 6;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 80.0;
+		}
+		LEVEL 0 FOR 40.0;
 	}
 }
 
@@ -206,8 +227,13 @@ TRANSITION_LIST("X1")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 30.0;
-		LEVEL 0 FOR 970.0;
+		NODE
+		{
+			REPEAT = 12;
+			LEVEL 0 FOR 40.0;
+			LEVEL 1 FOR 40.0;
+		}
+		LEVEL 0 FOR 40.0;
 	}
 }
 
@@ -216,9 +242,12 @@ TRANSITION_LIST("X2")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 970.0;
+		NODE
+		{
+			REPEAT = 25;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
+		}
 	}
 }
 
@@ -227,9 +256,12 @@ TRANSITION_LIST("X3")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 970.0;
+		NODE
+		{
+			REPEAT = 50;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+		}
 	}
 }
 
@@ -244,11 +276,22 @@ TRANSITION_LIST("Y")
 
 DISPLAY_LINE
 {
-	CHANNEL = "A";
-	EXPAND_STATUS = COLLAPSED;
+	CHANNEL = "Select_Line";
+	EXPAND_STATUS = EXPANDED;
 	RADIX = Binary;
 	TREE_INDEX = 0;
 	TREE_LEVEL = 0;
+	CHILDREN = 1, 2;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "A";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 1;
+	TREE_LEVEL = 1;
+	PARENT = 0;
 }
 
 DISPLAY_LINE
@@ -256,22 +299,14 @@ DISPLAY_LINE
 	CHANNEL = "B";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 1;
-	TREE_LEVEL = 0;
+	TREE_INDEX = 2;
+	TREE_LEVEL = 1;
+	PARENT = 0;
 }
 
 DISPLAY_LINE
 {
 	CHANNEL = "T_L";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 2;
-	TREE_LEVEL = 0;
-}
-
-DISPLAY_LINE
-{
-	CHANNEL = "X0";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;
@@ -280,11 +315,32 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "X1";
-	EXPAND_STATUS = COLLAPSED;
+	CHANNEL = "InputOptions";
+	EXPAND_STATUS = EXPANDED;
 	RADIX = Binary;
 	TREE_INDEX = 4;
 	TREE_LEVEL = 0;
+	CHILDREN = 5, 6, 7, 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "X0";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 5;
+	TREE_LEVEL = 1;
+	PARENT = 4;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "X1";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 6;
+	TREE_LEVEL = 1;
+	PARENT = 4;
 }
 
 DISPLAY_LINE
@@ -292,8 +348,9 @@ DISPLAY_LINE
 	CHANNEL = "X2";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 5;
-	TREE_LEVEL = 0;
+	TREE_INDEX = 7;
+	TREE_LEVEL = 1;
+	PARENT = 4;
 }
 
 DISPLAY_LINE
@@ -301,8 +358,9 @@ DISPLAY_LINE
 	CHANNEL = "X3";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 6;
-	TREE_LEVEL = 0;
+	TREE_INDEX = 8;
+	TREE_LEVEL = 1;
+	PARENT = 4;
 }
 
 DISPLAY_LINE
@@ -310,7 +368,7 @@ DISPLAY_LINE
 	CHANNEL = "Y";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 7;
+	TREE_INDEX = 9;
 	TREE_LEVEL = 0;
 }
 

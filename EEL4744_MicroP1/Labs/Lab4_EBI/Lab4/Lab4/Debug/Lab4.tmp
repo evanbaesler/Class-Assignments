@@ -1,0 +1,38 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.8</VERSION>
+ <DEVICE>"ATxmega128A1U"</DEVICE>
+ <WORKING_DIR>C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab4_EBI\Lab4\Lab4\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.3.146\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab4_EBI\Lab4\Lab4\lab4_3a.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.3.146\avrasm\inc\ATxmega128A1Udef.inc</FILE>
+  <FILE>C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab4_EBI\Lab4\Lab4\sram_data.asm</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab4_EBI\Lab4\Lab4\Debug\Lab4.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>Lab4.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>Lab4.map</FILE>
+  <FILE>Lab4.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <DATA><FILE>C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab4_EBI\Lab4\Lab4\sram_data.asm</FILE><LINE>11</LINE></DATA>
+  <DATA_END><FILE>C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab4_EBI\Lab4\Lab4\sram_data.asm</FILE><LINE>997</LINE></DATA_END>
+  <MAIN><FILE>C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab4_EBI\Lab4\Lab4\lab4_3a.asm</FILE><LINE>35</LINE></MAIN>
+  <EBI_IO_INIT><FILE>C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab4_EBI\Lab4\Lab4\lab4_3a.asm</FILE><LINE>81</LINE></EBI_IO_INIT>
+  <EBI_INIT><FILE>C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab4_EBI\Lab4\Lab4\lab4_3a.asm</FILE><LINE>98</LINE></EBI_INIT>
+  <TC_INIT><FILE>C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab4_EBI\Lab4\Lab4\lab4_3a.asm</FILE><LINE>127</LINE></TC_INIT>
+  <WRITE_LOOP><FILE>C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab4_EBI\Lab4\Lab4\lab4_3a.asm</FILE><LINE>52</LINE></WRITE_LOOP>
+  <READ_LOOP><FILE>C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab4_EBI\Lab4\Lab4\lab4_3a.asm</FILE><LINE>69</LINE></READ_LOOP>
+  <DELAY_300MS><FILE>C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab4_EBI\Lab4\Lab4\lab4_3a.asm</FILE><LINE>142</LINE></DELAY_300MS>
+  <DONE><FILE>C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab4_EBI\Lab4\Lab4\lab4_3a.asm</FILE><LINE>76</LINE></DONE>
+  <OVF_CHECK><FILE>C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab4_EBI\Lab4\Lab4\lab4_3a.asm</FILE><LINE>148</LINE></OVF_CHECK>
+ </LABELS>
+</ASSEMBLER_INFO>

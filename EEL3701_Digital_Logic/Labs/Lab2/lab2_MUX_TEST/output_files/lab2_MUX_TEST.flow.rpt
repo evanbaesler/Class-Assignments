@@ -1,5 +1,5 @@
 Flow report for lab2_MUX_TEST
-Tue Feb 17 01:09:29 2026
+Thu Jun  4 12:05:48 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ on the Quartus Prime software download page.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Tue Feb 17 01:09:29 2026           ;
+; Flow Status                        ; Successful - Thu Jun  4 12:05:48 2026           ;
 ; Quartus Prime Version              ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                      ; lab2_MUX_TEST                                   ;
 ; Top-level Entity Name              ; lab2_MUX_TEST                                   ;
@@ -103,7 +103,11 @@ on the Quartus Prime software download page.
 ; Assembler            ; 00:00:03     ; 1.0                     ; 4838 MB             ; 00:00:03                           ;
 ; Timing Analyzer      ; 00:00:04     ; 1.1                     ; 4924 MB             ; 00:00:03                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4684 MB             ; 00:00:01                           ;
-; Total                ; 00:00:48     ; --                      ; --                  ; 00:00:41                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4667 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4683 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4667 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4683 MB             ; 00:00:00                           ;
+; Total                ; 00:00:51     ; --                      ; --                  ; 00:00:43                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -117,6 +121,10 @@ on the Quartus Prime software download page.
 ; Assembler            ; Evan-Baesler     ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; Evan-Baesler     ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; Evan-Baesler     ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Evan-Baesler     ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Evan-Baesler     ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Evan-Baesler     ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Evan-Baesler     ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -128,6 +136,11 @@ quartus_fit --read_settings_files=off --write_settings_files=off lab2_MUX_TEST -
 quartus_asm --read_settings_files=off --write_settings_files=off lab2_MUX_TEST -c lab2_MUX_TEST
 quartus_sta lab2_MUX_TEST -c lab2_MUX_TEST
 quartus_eda --read_settings_files=off --write_settings_files=off lab2_MUX_TEST -c lab2_MUX_TEST
+quartus_sh --archive -revision lab2_MUX_TEST -output C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab2/lab2_MUX_TEST/lab2_MUX_TEST.qar lab2_MUX_TEST
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off lab2_MUX_TEST -c lab2_MUX_TEST --vector_source=C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab2/lab2_MUX_TEST/Waveform.vwf --testbench_file=C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab2/lab2_MUX_TEST/simulation/qsim/Waveform.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab2/lab2_MUX_TEST/simulation/qsim/ lab2_MUX_TEST -c lab2_MUX_TEST
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off lab2_MUX_TEST -c lab2_MUX_TEST --vector_source=C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab2/lab2_MUX_TEST/Waveform.vwf --testbench_file=C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab2/lab2_MUX_TEST/simulation/qsim/Waveform.vwf.vt
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab2/lab2_MUX_TEST/simulation/qsim/ lab2_MUX_TEST -c lab2_MUX_TEST
 
 
 

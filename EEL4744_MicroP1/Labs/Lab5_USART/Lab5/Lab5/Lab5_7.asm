@@ -5,7 +5,7 @@
  *   Author: Evan Baesler
  */ 
 
- .equ B_SEL = 299
+ .equ B_SEL = 296
  .equ B_SCALE = -7
 
  ; Use USART initialization from previous sections
@@ -121,9 +121,9 @@ ret
 TC_INIT:
 push r16
 ; Set the Timer Period to 31,250 cycles for a prescaler of 64, for 1s period
-ldi r16, low(31250)
+ldi r16, low(1000)
 sts TCC0_PER, r16
-ldi r16, high(31250)
+ldi r16, high(1000)
 sts TCC0_PER+1, r16
 ldi r16, TC_CLKSEL_DIV64_gc
 sts TCC0_CTRLA, r16

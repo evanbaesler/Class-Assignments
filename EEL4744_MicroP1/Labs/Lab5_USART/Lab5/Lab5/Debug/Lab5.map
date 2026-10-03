@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.8  C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab5_USART\Lab5\Lab5\Lab5_7.asm Sun Jul 05 20:24:59 2026
+AVRASM ver. 2.2.8  C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab5_USART\Lab5\Lab5\Lab5_7.asm Sat Jul 18 18:00:20 2026
 
 
 EQU  SIGNATURE_000 0000001e
@@ -4881,7 +4881,7 @@ EQU  USART_DRE_voffset 00000002
 EQU  USART_TXC_voffset 00000004
 EQU  SPI_INT_voffset 00000000
 EQU  INT_VECTORS_SIZE 000000fe
-EQU  B_SEL        0000012b
+EQU  B_SEL        00000128
 EQU  B_SCALE      fffffff9
 CSEG MAIN         000000b1
 CSEG INTERRUPT    00000101

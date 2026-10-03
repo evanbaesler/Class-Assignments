@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.2.8  C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab5_USART\Lab5\Lab5\Lab5_7.asm Sun Jul 05 20:24:59 2026
+AVRASM ver. 2.2.8  C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_MicroP1\Labs\Lab5_USART\Lab5\Lab5\Lab5_7.asm Sat Jul 18 18:00:20 2026
 
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.3.146\avrasm\inc\ATxmega128A1Udef.inc'
 [builtin](2): Including file 'C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\XMEGAA_DFP\1.3.146\avrasm\inc\ATxmega128A1Udef.inc'
@@ -6719,7 +6719,7 @@ AVRASM ver. 2.2.8  C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_Mic
                                   *   Author: Evan Baesler
                                   */ 
                                  
-                                  .equ B_SEL = 299
+                                  .equ B_SEL = 296
                                   .equ B_SCALE = -7
                                  
                                   ; Use USART initialization from previous sections
@@ -6787,7 +6787,7 @@ AVRASM ver. 2.2.8  C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_Mic
                                  ; BSEL = 256 + 32 + 8 + 2 + 1 = 2^8 + 2^5 + 2^3 + 2^1 + 2^0
                                  ; BAUDCTRLA = 00101011
                                  ; BAUDCTRLB = 10010001
-0000d9 e20b                      ldi r16, low(B_SEL)
+0000d9 e208                      ldi r16, low(B_SEL)
 0000da 9300 09a6                 sts USARTD0_BAUDCTRLA, r16
 0000dc e901                      ldi r16, ((B_SCALE << 4) | high(B_SEL))
 0000dd 9300 09a7                 sts USARTD0_BAUDCTRLB, r16
@@ -6835,9 +6835,9 @@ AVRASM ver. 2.2.8  C:\Users\ebaes\Documents\GitHub\Class_Assignments\EEL4744_Mic
                                  TC_INIT:
 0000f5 930f                      push r16
                                  ; Set the Timer Period to 31,250 cycles for a prescaler of 64, for 1s period
-0000f6 e102                      ldi r16, low(31250)
+0000f6 ee08                      ldi r16, low(1000)
 0000f7 9300 0826                 sts TCC0_PER, r16
-0000f9 e70a                      ldi r16, high(31250)
+0000f9 e003                      ldi r16, high(1000)
 0000fa 9300 0827                 sts TCC0_PER+1, r16
 0000fc e005                      ldi r16, TC_CLKSEL_DIV64_gc
 0000fd 9300 0800                 sts TCC0_CTRLA, r16

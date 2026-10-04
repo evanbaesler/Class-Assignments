@@ -157,7 +157,7 @@ def lcd_init():
 
 # ADC (returns averaged raw counts, 0-65535)
  
-def adc_read_both(samples=10000):
+def adc_read_both(samples=100000):
     vin_total = 0
     vx_total = 0
 

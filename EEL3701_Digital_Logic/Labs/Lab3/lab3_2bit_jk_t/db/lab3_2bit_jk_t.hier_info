@@ -1,0 +1,14 @@
+|lab3_2bit_jk_t
+T1 <= <GND>
+J0 <= <GND>
+K0 <= <GND>
+Q[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= <GND>
+Q[3] <= <GND>
+START => inst3.ACLR
+START => inst.ACLR
+CLK => inst3.CLK
+CLK => inst.CLK
+
+

@@ -1,0 +1,40 @@
+Quartus Prime Archive log --	C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Quiz/Quiz5/__Quiz5.auto.qarlog
+
+Archive:	C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Quiz/Quiz5/__Quiz5.auto.qar
+Date:		Tue Mar 24 19:16:26 2026
+Quartus Prime		25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Quiz/Quiz5/Quiz5.bdf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Quiz/Quiz5/Vhdl1.vhd
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Quiz/Quiz5/Waveform.vwf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Quiz/Quiz5/db/Quiz5.cbx.xml
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Quiz/Quiz5/db/Quiz5.qpf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Quiz/Quiz5/output_files/Quiz5.asm.rpt
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Quiz/Quiz5/output_files/Quiz5.done
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Quiz/Quiz5/output_files/Quiz5.eda.rpt
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Quiz/Quiz5/output_files/Quiz5.fit.rpt
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Quiz/Quiz5/output_files/Quiz5.fit.smsg
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Quiz/Quiz5/output_files/Quiz5.fit.summary
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Quiz/Quiz5/output_files/Quiz5.flow.rpt
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Quiz/Quiz5/output_files/Quiz5.jdi
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Quiz/Quiz5/output_files/Quiz5.map.rpt
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Quiz/Quiz5/output_files/Quiz5.map.summary
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Quiz/Quiz5/output_files/Quiz5.pin
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Quiz/Quiz5/output_files/Quiz5.pof
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Quiz/Quiz5/output_files/Quiz5.sld
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Quiz/Quiz5/output_files/Quiz5.sof
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Quiz/Quiz5/output_files/Quiz5.sta.rpt
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Quiz/Quiz5/output_files/Quiz5.sta.summary
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Quiz/Quiz5/quiz5.bdf
+Quiz5.qsf
+c:/altera_lite/25.1std/quartus/bin64/assignment_defaults.qdf
+c:/altera_lite/25.1std/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+c:/altera_lite/25.1std/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+c:/altera_lite/25.1std/quartus/libraries/vhdl/ieee/timing_b.vhd
+c:/altera_lite/25.1std/quartus/libraries/vhdl/ieee/timing_p.vhd
+quiz5block.bsf
+	======= Total: 29 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

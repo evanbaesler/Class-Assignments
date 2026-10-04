@@ -1,0 +1,163 @@
+// Copyright (C) 2025  Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Altera and sold by Altera or its authorized distributors.  Please
+// refer to the Altera Software License Subscription Agreements 
+// on the Quartus Prime software download page.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition"
+
+// DATE "02/01/2026 01:11:01"
+
+// 
+// Device: Altera 5M40ZM64C4 Package MBGA64
+// 
+
+// 
+// This Verilog file should be used for Questa Altera FPGA (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module lab1c (
+	W,
+	D,
+	C,
+	B,
+	A,
+	X);
+output 	W;
+input 	D;
+input 	C;
+input 	B;
+input 	A;
+output 	X;
+
+// Design Ports Information
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \A~combout ;
+wire \C~combout ;
+wire \D~combout ;
+wire \B~combout ;
+wire \inst4~0_combout ;
+
+
+// Location: PIN_D2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxv_io \A~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\A~combout ),
+	.padio(A));
+// synopsys translate_off
+defparam \A~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_H8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxv_io \C~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\C~combout ),
+	.padio(C));
+// synopsys translate_off
+defparam \C~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_H5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxv_io \D~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\D~combout ),
+	.padio(D));
+// synopsys translate_off
+defparam \D~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_D8,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxv_io \B~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\B~combout ),
+	.padio(B));
+// synopsys translate_off
+defparam \B~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N2
+maxv_lcell \inst4~0 (
+// Equation(s):
+// \inst4~0_combout  = (\A~combout  & ((\C~combout ) # ((!\D~combout )))) # (!\A~combout  & (!\B~combout  & ((\C~combout ) # (!\D~combout ))))
+
+	.clk(gnd),
+	.dataa(\A~combout ),
+	.datab(\C~combout ),
+	.datac(\D~combout ),
+	.datad(\B~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\inst4~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \inst4~0 .lut_mask = "8acf";
+defparam \inst4~0 .operation_mode = "normal";
+defparam \inst4~0 .output_mode = "comb_only";
+defparam \inst4~0 .register_cascade_mode = "off";
+defparam \inst4~0 .sum_lutc_input = "datac";
+defparam \inst4~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_F6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxv_io \W~I (
+	.datain(!\inst4~0_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(W));
+// synopsys translate_off
+defparam \W~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_H7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxv_io \X~I (
+	.datain(!\inst4~0_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(X));
+// synopsys translate_off
+defparam \X~I .operation_mode = "output";
+// synopsys translate_on
+
+endmodule

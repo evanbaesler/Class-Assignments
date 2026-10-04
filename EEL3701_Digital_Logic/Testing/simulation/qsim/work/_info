@@ -1,0 +1,75 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Testing/simulation/qsim
+vhard_block
+Z1 !s110 1775459290
+!i10b 1
+!s100 :_TiT6Z7l;MgCPlSWe@Sn0
+IF[;5@2L]P14Aom7zM2bBC2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1775459286
+Z4 8Testing.vo
+Z5 FTesting.vo
+L0 246
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1775459290.000000
+Z8 !s107 Testing.vo|
+Z9 !s90 -work|work|Testing.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vTesting
+R1
+!i10b 1
+!s100 NmeVY>SEoRTajVEKKS4V11
+IjCLOm=>;ikkQ4`n?o?3Bb0
+R2
+R0
+R3
+R4
+R5
+L0 32
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+n@testing
+vTesting_vlg_vec_tst
+R1
+!i10b 1
+!s100 d5MUFJ:CQC>J;]R`SBHho3
+IRZ6^5QHhQIAeXeG?OV>3g2
+R2
+R0
+R3
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 30
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11
+n@testing_vlg_vec_tst

@@ -1,0 +1,38 @@
+library ieee; use ieee.std_logic_1164.all;
+
+entity EBI_LOGIC is port(
+
+-- We have our CS enables and RE/WE
+WE_L: in std_logic;
+RE_L: in std_logic;
+CS_L: in std_logic_vector(3 downto 0);
+A: in std_logic_vector(9 downto 4);
+
+AA: out std_logic;
+AC: out std_logic;
+
+end EBI_LOGIC;
+
+architecture behavior of EBI_LOGIC is
+
+signal WE: std_logic;
+signal RE: std_logic;
+signal CS: in std_logic_vector(3 downto 0)
+
+begin
+
+WE <= not(WE_L);
+RE <= not(RE_L);
+CS <= not(CS_L);
+
+-- Outputs
+AA <= '1' when 
+
+else '0';
+
+AC <= '1' when
+
+else '0';
+
+ 
+end behavior;

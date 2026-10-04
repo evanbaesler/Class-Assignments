@@ -1,0 +1,58 @@
+% Automated build for HW12_Rewritten.asm % 
+DEPTH = 4096;
+WIDTH = 8;
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+CONTENT
+BEGIN
+
+0000		:	02;	-- LDAA #Count
+0001		:	10;
+
+0002		:	06;	-- STAA CountReg
+0003		:	00;
+0004		:	12;
+
+0005		:	08;	-- LDX #Data
+0006		:	00;
+0007		:	11;
+
+0008		:	0C;	-- LDAA 0,X
+0009		:	00;
+
+000a		:	0E;	-- LDAB $10,X
+000b		:	10;
+
+000c		:	15;	-- SUM_AB
+
+000d		:	1F;	-- SHFB_R
+
+000e		:	12;	-- STAB $20,X
+000f		:	20;
+
+0010		:	04;	-- LDAA CountReg
+0011		:	00;
+0012		:	12;
+
+0013		:	03;	-- LDAB #NegOne
+0014		:	FF;
+
+0015		:	14;	-- SUM_BA
+
+0016		:	20;	-- BEQ DONE
+0017		:	1D;
+
+0018		:	06;	-- STAA CountReg
+0019		:	00;
+001a		:	12;
+
+001b		:	21;	-- BNE LOOP
+001c		:	08;
+
+001d		:	20;	-- BEQ DONE
+001e		:	1D;
+
+[001f..0fff]	:	00;
+
+
+END

@@ -1,0 +1,104 @@
+Restore Archived Project report for computer
+Mon Apr 20 22:04:08 2026
+Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Mon Apr 20 22:04:08 2026 ;
+; Revision Name                   ; computer                              ;
+; Top-level Entity Name           ; computer_simulation                   ;
+; Family                          ; MAX 10                                ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26.qar' into the 'C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab7/GCPU/gcpu_s26_restored/' directory
+Info: Generated report 'computer.restore.rpt'
+Info (23030): Evaluation of Tcl script c:/altera_lite/25.1std/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4859 megabytes
+    Info: Processing ended: Mon Apr 20 22:04:08 2026
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++----------------------------------+
+; Files Restored                   ;
++----------------------------------+
+; File Name                        ;
++----------------------------------+
+; qar_info.json                    ;
+; CONTROLLER_ROM.bsf               ;
+; CONTROLLER_ROM.qip               ;
+; CONTROLLER_ROM.vhd               ;
+; EEPROM.bsf                       ;
+; EEPROM.qip                       ;
+; EEPROM.vhd                       ;
+; EPROM.bsf                        ;
+; EPROM.qip                        ;
+; EPROM.vhd                        ;
+; SRAM.bsf                         ;
+; SRAM.qip                         ;
+; SRAM.vhd                         ;
+; alu/alu.bdf                      ;
+; computer.qpf                     ;
+; computer.qsf                     ;
+; computer.vwf                     ;
+; computer_assignment_defaults.qdf ;
+; computer_programming.bdf         ;
+; computer_simulation.bdf          ;
+; controller.bdf                   ;
+; controller_rom.mif               ;
+; cpu/cpu.bdf                      ;
+; db/computer.sim.cvwf             ;
+; eprom.mif                        ;
+; hex_decoder.vhd                  ;
+; ir/ir.bdf                        ;
+; pc_mar_ix/pc_mar_ix.bdf          ;
+; sram.mif                         ;
+; xdr_ydr/xdr_ydr.bdf              ;
++----------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+

@@ -1,0 +1,27 @@
+% Automated build for Lab7.asm % 
+DEPTH = 4096;
+WIDTH = 8;
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+CONTENT
+BEGIN
+
+[0000..0e4a]	:	00;
+
+0e4b		:	57;	-- TableData dc.b $57,$1A,$03
+0e4c		:	1A;
+0e4d		:	03;
+
+0e4e		:	FF;	-- dc.b $FF,$0F
+0e4f		:	0F;
+
+0e50		:	0A;	-- dc.b $0A,03
+0e51		:	03;
+
+0e52		:	05;	-- dc.b $05,04
+0e53		:	04;
+
+[0e54..0fff]	:	00;
+
+
+END

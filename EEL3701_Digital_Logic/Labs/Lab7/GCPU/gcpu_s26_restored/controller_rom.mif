@@ -1,0 +1,139 @@
+% File name = controller_rom.mif		%
+% *************************************	%
+
+DEPTH = 16384;	% Address Bus Size %
+WIDTH = 32;	% Data Bus Size %
+
+ADDRESS_RADIX   = HEX;	% Address Format %
+DATA_RADIX      = HEX;	% Data Format %
+
+CONTENT
+	BEGIN
+
+[0..FF]		:	05830000; 	% instruction fetch state 0 %
+
+[100..103]	:	01418000;	% TAB %
+
+[104..107]	:	02818000;	% TBA %
+
+[108..10B]	:	09818000;	% LDAA #data state 1 %
+[200..2FF]	:	00818000; 	% LDAA #data state 2 %
+
+[10C..10F]	:	0D818000;	% LDAB #data state 1 %
+[300..3FF]	:	01058000; 	% LDAB #data state 3 %
+
+[110..113]	:	11818000;	% LDAA $addr state 1 %
+[400..4FF]	:	15818080; 	% LDAA $data state 4 %
+[500..5FF]	:	19818040; 	% LDAA $data state 5 %
+[600..6FF]	:	00810400; 	% LDAA $data state 6 %
+
+[114..117]	:	1D818000;	% LDAB $addr state 1 %
+[700..7FF]	:	21818080; 	% LDAB $data state 7 %
+[800..8FF]	:	25818040; 	% LDAB $data state 8 %
+[900..9FF]	:	01010400; 	% LDAB $data state 9 %
+
+[118..11B]	:	29818000;	% STAA $addr state 1 %
+[A00..AFF]	:	2D818080; 	% STAA $data state A %
+[B00..BFF]	:	31818040; 	% STAA $data state B %
+[C00..CFF]	:	01800400; 	% STAA $data state C %
+
+[11C..11F]	:	35818000;	% STAB $addr state 1 %
+[D00..DFF]	:	39858080; 	% STAB $data state D %
+[E00..EFF]	:	3D858040; 	% STAB $data state E %
+[F00..FFF]	:	01840400; 	% STAB $data state F %
+
+[120..123]	:	41818000;	% LDX #data state 1  %
+[1000..10FF]:	45818020; 	% LDX #data state 10 %
+[1100..11FF]:	01818010; 	% LDX #data state 11 %
+
+[124..127]	:	49818000;	% LDY #data state 1  %
+[1200..12FF]:	4D818008; 	% LDY #data state 12 %
+[1300..13FF]:	01818004; 	% LDY #data state 13 %
+
+[128..12B]	:	51818000;	% LDX $addr state 1  %
+[1400..14FF]:	55818080; 	% LDX $addr state 14 %
+[1500..15FF]:	59818040; 	% LDX $addr state 15 %
+[1600..16FF]:	5D814420; 	% LDX $addr state 16 %
+[1700..17FF]:	01810410; 	% LDX $addr state 17 %
+
+[12C..12F]	:	61818000;	% LDY $addr state 1  %
+[1800..18FF]:	65818080; 	% LDY $addr state 18 %
+[1900..19FF]:	69818040; 	% LDY $addr state 19 %
+[1A00..1AFF]:	6D814408; 	% LDY $addr state 1A %
+[1B00..1BFF]:	01810404; 	% LDY $addr state 1B %
+
+[130..133]	:	71818000;	% LDAA dd,X  state 1  %
+[1C00..1CFF]:	75818002; 	% LDAA dd,X  state 1C %
+[1D00..1DFF]:	00810800; 	% LDAA dd,X  state 1D %
+
+[134..137]	:	79818000;	% LDAA dd,Y  state 1  %
+[1E00..1EFF]:	7D818001; 	% LDAA dd,Y  state 1E %
+[1F00..1FFF]:	00810C00; 	% LDAA dd,Y  state 1F %
+
+[138..13B]	:	81818000;	% LDAB dd,X  state 1  %
+[2000..20FF]:	85818002; 	% LDAB dd,X  state 20 %
+[2100..21FF]:	01010800; 	% LDAB dd,X  state 21 %
+
+[13C..13F]	:	89818000;	% LDAB dd,Y  state 1  %
+[2200..22FF]:	8D818001; 	% LDAB dd,Y  state 22 %
+[2300..23FF]:	01010C00; 	% LDAB dd,Y  state 23 %
+
+[140..143]	:	91818000;	% STAA dd,X  state 1  %
+[2400..24FF]:	95818002; 	% STAA dd,X  state 24 %
+[2500..25FF]:	01800800; 	% STAA dd,X  state 25 %
+
+[144..147]	:	99818000;	% STAA dd,Y  state 1  %
+[2600..26FF]:	9D818001; 	% STAA dd,Y  state 26 %
+[2700..27FF]:	01800C00; 	% STAA dd,Y  state 27 %
+
+[148..14B]	:	A1818000;	% STAB dd,X  state 1  %
+[2800..28FF]:	A5858002; 	% STAB dd,X  state 28 %
+[2900..29FF]:	01840800; 	% STAB dd,X  state 29 %
+
+[14C..14F]	:	A9818000;	% STAB dd,Y  state 1  %
+[2A00..2AFF]:	AD858001; 	% STAB dd,Y  state 2A %
+[2B00..2BFF]:	01840C00; 	% STAB dd,Y  state 2B %
+
+[150..153]	:	03898000;	% SUM B,A  state 1    %
+[154..157]	:	01C98000;	% SUM A,B  state 1    %
+[158..15B]	:	038D8000;	% AND B,A  state 1    %
+[15C..15F]	:	01CD8000;	% AND A,B  state 1    %
+[160..163]	:	03918000;	% OR  B,A  state 1    %
+[164..167]	:	01D18000;	% OR  A,B  state 1    %
+[168..16B]	:	03958000;	% COM A    state 1    %
+[16C..16F]	:	01D98000;	% COM B    state 1    %
+[170..173]	:	039D8000;	% SHFA_L   state 1    %
+[174..177]	:	03A18000;	% SHFA_R   state 1    %
+[178..17B]	:	01E58000;	% SHFB_L   state 1    %
+[17C..17F]	:	01E98000;	% SHFB_R   state 1    %
+
+[182..183]	:	B1818000;	% BEQ addr state 1  %
+[180..181]  :	B5818000; 	% BEQ addr state 1  %
+[2C00..2CFF]:	01810200; 	% BEQ addr state 2C %
+[2D00..2DFF]:	01818000; 	% BEQ addr state 2D %
+
+[184..185]	:	B9818000;	% BNE addr state 1  %
+[186..187]  :	BD818000; 	% BNE addr state 1  %
+[2E00..2EFF]:	01810200; 	% BNE addr state 2E %
+[2F00..2FFF]:	01818000; 	% BNE addr state 2F %
+
+189  		:	C1818000;	% BN addr state 1  %
+18B 		:	C1818000;	% BN addr state 1  %
+188         :	C5818000; 	% BN addr state 1  %
+18A         :	C5818000; 	% BN addr state 1  %
+[3000..30FF]:	01810200; 	% BN addr state 30 %
+[3100..31FF]:	01818000; 	% BN addr state 31 %
+
+18C 		:	C9818000;	% BP addr state 1  %
+18E 		:	C9818000;	% BP addr state 1  %
+18D         :	CD818000; 	% BP addr state 1  %
+18F         :	CD818000; 	% BP addr state 1  %
+[3200..32FF]:	01810200; 	% BP addr state 32 %
+[3300..33FF]:	01818000; 	% BP addr state 33 %
+
+[1C0..1C3]	:	0181A000;	% INX %
+
+[1C4..1C7]	:	01819000;	% INY %
+
+END;
+

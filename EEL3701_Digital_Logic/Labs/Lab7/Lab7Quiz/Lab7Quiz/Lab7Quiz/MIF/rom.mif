@@ -1,0 +1,37 @@
+% Automated build for Lab7Quiz.asm % 
+DEPTH = 4096;
+WIDTH = 8;
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+CONTENT
+BEGIN
+
+[0000..0136]	:	00;
+
+0137		:	02;	-- dc.b $02,$03
+0138		:	03;
+
+0139		:	04;	-- LDAA 37
+013a		:	25;
+013b		:	00;
+
+013c		:	06;	-- STAA Count
+013d		:	00;
+013e		:	10;
+
+013f		:	04;	-- LDAA N
+0140		:	37;
+0141		:	01;
+
+0142		:	03;	-- LDAB #-1
+0143		:	FF;
+
+0144		:	14;	-- SUM_BA
+
+0145		:	21;	-- BNE Loop
+0146		:	39;
+
+[0147..0fff]	:	00;
+
+
+END

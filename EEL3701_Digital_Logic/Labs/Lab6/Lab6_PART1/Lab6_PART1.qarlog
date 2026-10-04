@@ -1,0 +1,21 @@
+Quartus Prime Archive log --	C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART1/Lab6_PART1.qarlog
+
+Archive:	C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART1/Lab6_PART1.qar
+Date:		Tue Apr  7 17:21:19 2026
+Quartus Prime		25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART1/Lab6_PART1.bdf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART1/Lab6_PART1.qpf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART1/Lab6_PART1.qsf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART1/Waveform.vwf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART1_CONT/Lab6_CONT.bdf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART1_CONT/Lab6_CONT.cmp
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART1_CONT/Lab6_CONT_COMP.vhd
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_PART1_IR/LAB6_IR.bdf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab6/Lab6_RALU/Lab6_RALU.bdf
+c:/altera_lite/25.1std/quartus/bin64/assignment_defaults.qdf
+	======= Total: 10 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

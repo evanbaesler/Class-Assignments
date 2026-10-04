@@ -1,0 +1,22 @@
+Quartus Prime Archive log --	C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Homework/HW1/Archive/Quartus_Tutorial.qarlog
+
+Archive:	C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Homework/HW1/Archive/Quartus_Tutorial.qar
+Date:		Tue Jan 20 18:19:43 2026
+Quartus Prime		25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Homework/HW1/Waveform.vwf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Homework/HW1/hw1_tutorial.bdf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Homework/HW1/hw1_tutorial.qpf
+C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Homework/HW1/hw1_tutorial.qsf
+c:/altera_lite/25.1std/quartus/bin64/assignment_defaults.qdf
+	======= Total: 5 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Tue Jan 20 18:20:17 2026
+Source archive file:	C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Homework/HW1/Archive/Quartus_Tutorial.qar
+Archive was extracted into	C:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Homework/HW1/Archive/Quartus_Tutorial_restored/
+		 - successfully.

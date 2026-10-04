@@ -1,0 +1,29 @@
+|LAB6_IR
+IR[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+IR[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+CLR_L => inst3.ACLR
+CLR_L => inst1.ACLR
+CLK => inst3.CLK
+CLK => inst1.CLK
+IR_LOAD => 21mux:inst2.S
+IR_LOAD => 21mux:inst.S
+INPUT[0] => 21mux:inst2.A
+INPUT[1] => 21mux:inst.A
+
+
+|LAB6_IR|21mux:inst2
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+
+|LAB6_IR|21mux:inst
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+

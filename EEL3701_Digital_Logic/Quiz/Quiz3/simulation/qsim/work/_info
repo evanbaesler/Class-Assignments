@@ -1,0 +1,73 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Quiz/Quiz3/simulation/qsim
+vhard_block
+Z1 !s110 1771977299
+!i10b 1
+!s100 aKIAg67XE3IWI6UfgOYSh2
+IIObl;H5biSSK2dL?JBM3O3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1771977298
+Z4 8quiz3.vo
+Z5 Fquiz3.vo
+L0 333
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1771977299.000000
+Z8 !s107 quiz3.vo|
+Z9 !s90 -work|work|quiz3.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vquiz3
+R1
+!i10b 1
+!s100 UiAOIPVKeZ:R1g0AFgoT:1
+I>f;<cUHFRKYJ0>U1GPQRY2
+R2
+R0
+R3
+R4
+R5
+L0 32
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vquiz3_vlg_vec_tst
+R1
+!i10b 1
+!s100 4N:6mg8hO15Y:@419U4e[2
+Ie>oLV_QAULiP6`AV0]iZO2
+R2
+R0
+w1771977297
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 30
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11

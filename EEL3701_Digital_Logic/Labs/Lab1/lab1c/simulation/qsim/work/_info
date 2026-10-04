@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab1/lab1c/simulation/qsim
+vlab1c
+Z1 !s110 1769926262
+!i10b 1
+!s100 EEYIIn[:eACb_6zP`Yznk0
+Iz@fdNc1CWSOVULz:TTS;K2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1769926261
+8lab1c.vo
+Flab1c.vo
+L0 32
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1769926262.000000
+!s107 lab1c.vo|
+!s90 -work|work|lab1c.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vlab1c_vlg_vec_tst
+R1
+!i10b 1
+!s100 =B5B>i9j8EDHHNMFJQBZA3
+IBFA3?h20KDbcgbM=UiPNi2
+R2
+R0
+w1769926260
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 30
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5
+R6

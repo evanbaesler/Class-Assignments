@@ -1,0 +1,57 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "INPUT_EN",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT_EN",
+					"strict" : false
+				},
+				{
+					"name" : "A[9]",
+					"strict" : false
+				},
+				{
+					"name" : "A[5]",
+					"strict" : false
+				},
+				{
+					"name" : "A[4]",
+					"strict" : false
+				},
+				{
+					"name" : "CS2_L",
+					"strict" : false
+				},
+				{
+					"name" : "A[7]",
+					"strict" : false
+				},
+				{
+					"name" : "A[6]",
+					"strict" : false
+				},
+				{
+					"name" : "A[8]",
+					"strict" : false
+				},
+				{
+					"name" : "RE_L",
+					"strict" : false
+				},
+				{
+					"name" : "WE_L",
+					"strict" : false
+				},
+				{
+					"name" : "CS0_L",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

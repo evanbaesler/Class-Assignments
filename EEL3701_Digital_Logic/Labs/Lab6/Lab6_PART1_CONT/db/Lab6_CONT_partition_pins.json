@@ -1,0 +1,57 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "IR_LOAD",
+					"strict" : false
+				},
+				{
+					"name" : "D",
+					"strict" : false
+				},
+				{
+					"name" : "MSA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MSA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MSB[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MSC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MSC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MSC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "CLR_L",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

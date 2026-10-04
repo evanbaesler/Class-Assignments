@@ -1,0 +1,15 @@
+|Testing
+y <= 21mux:inst.Y
+s => 21mux:inst.S
+b => 21mux:inst.B
+a => 21mux:inst.A
+
+
+|Testing|21mux:inst
+Y <= 5.DB_MAX_OUTPUT_PORT_TYPE
+A => 6.IN0
+S => 6.IN1
+S => 7.IN1
+B => 8.IN0
+
+

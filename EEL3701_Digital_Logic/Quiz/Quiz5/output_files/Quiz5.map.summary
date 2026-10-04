@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Tue Mar 24 19:52:56 2026
+Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+Revision Name : Quiz5
+Top-level Entity Name : Quiz5
+Family : MAX 10
+Total logic elements : 5
+    Total combinational functions : 5
+    Dedicated logic registers : 3
+Total registers : 3
+Total pins : 8
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

@@ -1,0 +1,75 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/ebaes/Documents/GitHub/Class_Assignments/EEL3701_Digital_Logic/Labs/Lab2/lab2_4inMUX/simulation/qsim
+vhard_block
+Z1 !s110 1771125809
+!i10b 1
+!s100 F7jKW`OBWQY01N?cDGFga0
+IIfbP6b1nY7`@J>cW5EZQj2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1771125808
+Z4 8lab2_4inMUX.vo
+Z5 Flab2_4inMUX.vo
+L0 312
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1771125809.000000
+Z8 !s107 lab2_4inMUX.vo|
+Z9 !s90 -work|work|lab2_4inMUX.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vlab2_4inMUX
+R1
+!i10b 1
+!s100 jVi8iX9CIlFoS;6l=_F<H2
+ILgm@NHV1[=KUD8J_YX>=f2
+R2
+R0
+R3
+R4
+R5
+L0 32
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+nlab2_4in@m@u@x
+vlab2_4inMUX_vlg_vec_tst
+R1
+!i10b 1
+!s100 FhddC];3ZAIBVQmMN5__Z0
+I[[=Q`n7>af:=dFk8Ye3A12
+R2
+R0
+w1771125807
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 30
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R11
+nlab2_4in@m@u@x_vlg_vec_tst

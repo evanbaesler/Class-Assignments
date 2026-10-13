@@ -1,42 +1,54 @@
-% Plot impulse and step responses of our canonical second-order system
+%% Second Order Impulse Response Plot
+
 clear; clc; close all;
 
-% System parameters
-omega_0 = 1;
-alphas = [1, 0.2, 0, 5];
-K = 1;
-num = K;
+% HW Parameters
+w_0 = 1;
+alphas = [0, 0.2, 1, 5];
+numerator = 1;
 
-% Plot impulse responses
+%% Calculate Four Impulse Responses
+
+% Empty Plot
 figure();
 hold on;
+
+% Our function is s^2 + 2 * alpha + w_0^2
+% So, our denominator coefficients are:
+% 1, 2 * alpha, w_0^2
+
 for i = 1:length(alphas)
     alpha = alphas(i);
-    den = [1 2*alpha omega_0];    % denominator [s^2 + 2*alpha*s + omega_0^2]
-    H = tf(num, den);
-    impulse(H);
+    denominator = [1 2*alpha w_0^2];
+    H = tf(numerator, denominator); % tf creates a transfer function from our numerator and denominator.
+    impulse(H); % takes the impulse of our tf
 end
-xlabel('t(s)');
+
+xlabel('time (s)');
 ylabel('Amplitude');
 title('Impulse Response for Second-Order Systems');
-axis([0, 50, -1, 2]);
-legend('alpha = 1', 'alpha = 0.2', 'alpha = 0', 'alpha = 5');
+axis([0, 50, -1, 1]);
+legend('\alpha = 0', '\alpha = 0.2', '\alpha = 1', '\alpha = 5');
 grid on;
 hold off;
 
-% Plot step responses
+%% Calculate Step Responses
+
+% Empty Plot 2
 figure(2);
 hold on;
+
 for i = 1:length(alphas)
     alpha = alphas(i);
-    den = [1 2*alpha omega_0];    % denominator [s^2 + 2*alpha*s + omega_0^2]
-    H = tf(num, den);
-    step(H);
+    denominator = [1 2*alpha w_0^2];
+    H = tf(numerator, denominator);
+    step(H); % takes the step of our tf
 end
-xlabel('t(s)');
+
+xlabel('time (s)');
 ylabel('Amplitude');
-title('Step Response for Second-Order Systems');
-axis([0, 50])
-legend('a = 1', 'a = 0.2', 'a = 0', 'a = 5');
+title('2nd Order Step Response');
+axis([0, 50, -1, 2])
+legend('\alpha = 0', '\alpha = 0.2', '\alpha = 1', '\alpha = 5');
 grid on;
 hold off;

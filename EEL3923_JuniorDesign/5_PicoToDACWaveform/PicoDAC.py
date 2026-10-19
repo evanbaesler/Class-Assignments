@@ -55,7 +55,7 @@ adc_amp = ADC(26)
 
 # WAVEFORM TABLE MATH
 
-NUM_SAMPLES = 25
+NUM_SAMPLES = 110
 DAC_MAX = 1023
 
 # Generate each table once during startup

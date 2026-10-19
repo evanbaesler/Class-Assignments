@@ -42,7 +42,7 @@ for i = 1:length(alphas)
     alpha = alphas(i);
     denominator = [1 2*alpha w_0^2];
     H = tf(numerator, denominator);
-    step(H); % takes the step of our tf
+    step(H);
 end
 
 xlabel('time (s)');

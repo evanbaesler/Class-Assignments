@@ -27,13 +27,13 @@ t = np.linspace(0,end,N)   #array of time points of quantity N (s)
 fsq = 1619   #repetition frequency of square wave (Hz)
 square_sig=signal.square(2 * np.pi * fsq * t)  # duty cycle defaults to 0.5
 
-# add any other waveforms you wish to explore (e.g., sine, sine with braodband noise, etc.)
+# add any other waveforms you wish to explore (e.g., sine, sine with broadband noise, etc.)
 
 
 #-----------Filters---------------------
 #Specs for lowpass filter
 
-wc2= 2*np.pi*(fsq+100)  # cut off frequency (rad/s), Change this accordignly
+wc2= 2*np.pi*(fsq+100)  # cut off frequency (rad/s), Change this accordingly
 order = 4 #filter order (1=20 dB/decade rolloff, 2 = 40 dB/dec, etc.)
 fplot = np.logspace(1, 4, N)  # (specify frequency range of interest, 2=10e2, 4=10e4)
 

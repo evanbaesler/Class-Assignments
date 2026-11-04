@@ -1,0 +1,29 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: AlarmClock.PcbDoc   11/4/2026  4:17:46 PM
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII Plated RoundHoles File : AlarmClock-RoundHoles-Plated.TXT
+ASCII Non-Plated RoundHoles File : AlarmClock-RoundHoles-NonPlated.TXT
+ASCII Plated SlotHoles File : AlarmClock-SlotHoles-Plated.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      0.66mm (26mil)                                            Slot              2         PTH        27.15mm (1.07inch)
+T2      0.7mm (28mil)                                             Round             20        PTH        250.59mm (9.87inch)
+T3      0.711mm (28mil)                                           Round             33        PTH        386.57mm (15.22inch)
+T4      0.8mm (31mil)                                             Round             2         PTH        5.00mm (0.20inch)
+T5      0.85mm (33mil)                                            Round             40        PTH        421.12mm (16.58inch)
+T6      0.889mm (35mil)                                           Round             49        PTH        303.65mm (11.95inch)
+T7      0.9mm (35mil)                                             Round             8         PTH        22.86mm (0.90inch)
+T8      1mm (39mil)                                               Round             28        PTH        217.95mm (8.58inch)
+T9      1.016mm (40mil)                                           Round             16        PTH        63.50mm (2.50inch)
+T10     1.02mm (40mil)                                            Round             8         PTH        165.99mm (6.54inch)
+T11     1.3mm (51mil)                                             Round             5         PTH        6.81mm (0.27inch)
+T12     1.45mm (57mil)                                            Round             2         PTH        20.94mm (0.82inch)
+T13     1.52mm (60mil)                                            Round             2         PTH        20.50mm (0.81inch)
+T14     2.54mm (100mil)                                           Round             3         NPTH       52.84mm (2.08inch)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              218
+
+Total Processing Time (hh:mm:ss) : 00:00:00

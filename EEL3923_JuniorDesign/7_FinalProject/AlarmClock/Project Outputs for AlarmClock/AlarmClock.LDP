@@ -1,0 +1,4 @@
+Layer Pairs Export File for PCB: C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc
+LayersSetName=Top_Bot_Plated_Thru_Holes|DrillFile=alarmclock-roundholes-plated.txt|DrillLayers=gtl,gp1,gp2,gbl
+LayersSetName=Top_Bot_Plated_Slot_Holes|DrillFile=alarmclock-slotholes-plated.txt|DrillLayers=gtl,gp1,gp2,gbl
+LayersSetName=Top_Bot_NonPlated_Thru_Holes|DrillFile=alarmclock-roundholes-nonplated.txt|DrillLayers=gtl,gp1,gp2,gbl

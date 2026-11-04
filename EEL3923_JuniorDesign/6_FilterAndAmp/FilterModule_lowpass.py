@@ -33,7 +33,7 @@ square_sig=signal.square(2 * np.pi * fsq * t)  # duty cycle defaults to 0.5
 #-----------Filters---------------------
 #Specs for lowpass filter
 
-wc2= 2*np.pi*(fsq+100)  # cut off frequency (rad/s), Change this accordingly
+wc2= 2*np.pi*(fsq+1650)  # cut off frequency (rad/s), Change this accordingly
 order = 4 #filter order (1=20 dB/decade rolloff, 2 = 40 dB/dec, etc.)
 fplot = np.logspace(1, 4, N)  # (specify frequency range of interest, 2=10e2, 4=10e4)
 

@@ -132,7 +132,7 @@ ClassGenCCAutoRoomEnabled=0
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=XVFFUOUV
 
 [Document6]
 DocumentPath=..\..\Libraries\ECE Lib 22.SCHLIB
@@ -152,23 +152,6 @@ GenerateClassCluster=0
 DocumentUniqueId=GDQXHPYH
 
 [Document7]
-DocumentPath=..\..\Libraries\ECE LIB new.PcbLib
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=0
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
-[Document8]
 DocumentPath=..\..\Libraries\Footprint-Lib-PhilsLab.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -185,7 +168,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document9]
+[Document8]
 DocumentPath=..\..\Libraries\Schematic-Lib-PhilsLab.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -202,7 +185,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=
 
-[Document10]
+[Document9]
 DocumentPath=..\Components\9V Battery\BC9VPC.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -219,7 +202,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=JMSRBRKM
 
-[Document11]
+[Document10]
 DocumentPath=..\Components\9V Battery\BC9VPC.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -236,7 +219,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=VKPDXNYZ
 
-[Document12]
+[Document11]
 DocumentPath=..\Components\DS3231 Real-time Clock\DS3231SNTR.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -253,7 +236,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=RHQNHJNB
 
-[Document13]
+[Document12]
 DocumentPath=..\Components\DS3231 Real-time Clock\DS3231SNTR.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -270,7 +253,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=JPTQUSNX
 
-[Document14]
+[Document13]
 DocumentPath=DrillHoles.Cam
 AnnotationEnabled=1
 AnnotateStartValue=1

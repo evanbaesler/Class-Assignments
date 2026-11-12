@@ -1,0 +1,429 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD24\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">11/11/2026</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">9:40:21 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc" class="file"><acronym title="C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc">C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">6</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Waived Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">10</td></tr>
+</table>
+</td>
+</table><a name="ID1TG2FB4TJIDJC00UQEJ4GBIJ4C03HG2RF3WTMOD1NJWZZNDFFEQ"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDLTP0JBU3IA1NBBWRTTOGMRZ1PWGWHMLWKORSLHK10O5PVW3QEZD">Clearance Constraint (Gap=4mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDMPMELKVMON0XPYXQDEQTBMC1NJFTAKJILHK2XFBOMWPKGFJ2CVVG">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDVJOMF35M3J12LT024EU53QMV5G2RX1W2AQAWPVON21QPIWMCUWLB">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDZAA1CJSBWOL3QQERPKESBI2LILMRUMGVAYEB3JE3ZJCSHXKXGBG">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJML2ZJ1P3U2JCDSFYWFTBAY4TKKRWNY5EPINWXD5G5FBI3JLDBIM">Width Constraint (Min=15mil) (Max=35mil) (Preferred=20mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID00ESYZ1YZGPPKI50B3GNTPECSDQXHVGCIZYF30GRBL0JO4KNWYSI">Width Constraint (Min=6mil) (Max=40mil) (Preferred=10mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDZDGSWLWQEORXLSSKVVYIDEI3WKUUSAFNYAOK2HJKC0F2XGMIECEL">Width Constraint (Min=30mil) (Max=30mil) (Preferred=30mil) (InNet('+9V'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPXXDZMQKGVJZKXBCZM1OHKPBUKQAJWROVMFHVUIFZ2XRISJV45FN">Width Constraint (Min=15mil) (Max=24mil) (Preferred=20mil) (InNetClass('Regulated Power'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDZCIQXKF5SPMHEVDEOFKZPWPWHOZFYRYMWROTUFJYLW2BMVUKLMEC">Width Constraint (Min=8mil) (Max=12mil) (Preferred=10mil) (InNetClass('Communications'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDX5YZF5LPECNOI52ZMXM0TAS12GZCYRCHO0HWZCMS1WHESSDEAAQG">Routing Topology Rule(Topology=Shortest) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID5EKCSGIMCXGRPT3CR4GAQZYJVPXDCFRUYE1BW4MMHFJAUOMOZHC">Power Plane Connect Rule(Relief Connect )(Expansion=11.811mil) (Conductor Width=4mil) (Air Gap=4mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDG4EQF4GQ2DW4PFIX2WWNUB4KZENWVYIBHRVINUDKQUN5NY1HFOOG">Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (InPadClass('PowerPads'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQIKOR3AVWPGMOEQLSY1YCTDSLJDFNEICNU3MNLM5KTMUKUW1IBKF">Minimum Annular Ring (Minimum=3mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID2KCTJKAPO1GMOXQO04KHSRHJJOP1SY3DZA1RLBHY0SJM0PUUXH1N">Hole Size Constraint (Min=7.874mil) (Max=248.031mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCFOY02SLNRZRMXBKKWV3EM40AP50YJDWG1RO12LIMZF0BMTVNLTE">Hole To Hole Clearance (Gap=9.842mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPLTBV2DEWPLWITBBAZHMRNH1KB1KEYX3QGWIW4P3PVUUBDE5OYGG">Minimum Solder Mask Sliver (Gap=0mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDU0ERBK10I5KFJIW5TV20DNLOOPWQ0QHXTSNMNTBWMRFPHLNTVYPG">Silk To Solder Mask (Clearance=4mil) (IsPad),(All)</a></td>
+<td class="column2">6</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID1LQ4YVJYJUJ5B2LVJ1UZG0MOAHT3U3UJVCGNFTB3FLJTAJPZVQQN">Silk to Silk (Clearance=0mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDILFLJVDOWKXYLJZNHHXTNKFC4ND3T1SNAN04EOB5V4K25FYW2TNG">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDIET2UJETZRWHOQCWFA2FN2SYSFD2E3SGUSPRAZEIFWSHXNTMEDGC">Board Clearance Constraint (Gap=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID4P4L1I2ENVVYH3NKO3XXRHXS1KOTBBRXOEJ0HZLUBM5GLU5XIY5B">Height Constraint (Min=0mil) (Max=71497.938mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">6</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Waived Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID5GVK1QUDJXSKCQUSD0WXOYRFZOFLOWE4REYOV2HSLAKGON0IOPFG">Board Clearance Constraint (Gap=0mil) (All)</a></td>
+<td class="column2">10</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">10</td>
+</tr>
+</table><br><a name="IDMTTD3B1OJ1ENJA25B0E2FQGRMIX523TMHTCMUNKXXQXXWF0T42UG"><h2>Rule Violations</h2></a><a name="IDU0ERBK10I5KFJIW5TV20DNLOOPWQ0QHXTSNMNTBWMRFPHLNTVYPG"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=4mil) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3507.375mil|Location2.X=3512.625mil|Location1.Y=2048.618mil|Location2.Y=2053.868mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3507.375mil|Location2.X=3512.625mil|Location1.Y=2048.618mil|Location2.Y=2053.868mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (2.485mil &lt; 4mil) Between Pad R6-1(3510mil,2085mil) on Multi-Layer And Track (3420mil,2045mil)(3800mil,2045mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [2.485mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3707.375mil|Location2.X=3712.625mil|Location1.Y=2048.618mil|Location2.Y=2053.868mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3707.375mil|Location2.X=3712.625mil|Location1.Y=2048.618mil|Location2.Y=2053.868mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (2.485mil &lt; 4mil) Between Pad R6-3(3710mil,2085mil) on Multi-Layer And Track (3420mil,2045mil)(3800mil,2045mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [2.485mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2677.375mil|Location2.X=2682.625mil|Location1.Y=4203.618mil|Location2.Y=4208.868mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2677.375mil|Location2.X=2682.625mil|Location1.Y=4203.618mil|Location2.Y=4208.868mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (2.485mil &lt; 4mil) Between Pad R7-1(2680mil,4240mil) on Multi-Layer And Track (2590mil,4200mil)(2970mil,4200mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [2.485mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2877.375mil|Location2.X=2882.625mil|Location1.Y=4203.618mil|Location2.Y=4208.868mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2877.375mil|Location2.X=2882.625mil|Location1.Y=4203.618mil|Location2.Y=4208.868mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (2.485mil &lt; 4mil) Between Pad R7-3(2880mil,4240mil) on Multi-Layer And Track (2590mil,4200mil)(2970mil,4200mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [2.485mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3882.375mil|Location2.X=3887.625mil|Location1.Y=4208.618mil|Location2.Y=4213.868mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3882.375mil|Location2.X=3887.625mil|Location1.Y=4208.618mil|Location2.Y=4213.868mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (2.485mil &lt; 4mil) Between Pad R8-1(3885mil,4245mil) on Multi-Layer And Track (3795mil,4205mil)(4175mil,4205mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [2.485mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4082.375mil|Location2.X=4087.625mil|Location1.Y=4208.618mil|Location2.Y=4213.868mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4082.375mil|Location2.X=4087.625mil|Location1.Y=4208.618mil|Location2.Y=4213.868mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (2.485mil &lt; 4mil) Between Pad R8-3(4085mil,4245mil) on Multi-Layer And Track (3795mil,4205mil)(4175mil,4205mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [2.485mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDYLHRVFGPYO0ZBPRUYPKOJUIYPJPLY1N401ODYAMOGW4FMZ0B3EEL"><h2>Waived Violations</h2></a><a name="ID5GVK1QUDJXSKCQUSD0WXOYRFZOFLOWE4REYOV2HSLAKGON0IOPFG"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="waived">Board Clearance Constraint (Gap=0mil) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1342.229mil|Location2.X=1348.479mil|Location1.Y=5537.765mil|Location2.Y=5544.014mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1342.229mil|Location2.X=1348.479mil|Location1.Y=5537.765mil|Location2.Y=5544.014mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 7.874mil) Between Board Edge And Track (1345.354mil,4641.26mil)(1345.354mil,6058.582mil) on Top Overlay </acronym></a><br>Waived by Evan Baesler at 11/11/2026 9:39:48 PM<br>LCD Hangs off-board.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2917.032mil|Location2.X=2923.282mil|Location1.Y=6055.457mil|Location2.Y=6061.707mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2917.032mil|Location2.X=2923.282mil|Location1.Y=6055.457mil|Location2.Y=6061.707mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 7.874mil) Between Board Edge And Track (1345.354mil,6058.582mil)(4494.96mil,6058.582mil) on Top Overlay </acronym></a><br>Waived by Evan Baesler at 11/11/2026 9:39:48 PM<br>LCD Hangs off-board.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1422.937mil|Location2.X=1429.187mil|Location1.Y=5461.555mil|Location2.Y=5467.805mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1422.937mil|Location2.X=1429.187mil|Location1.Y=5461.555mil|Location2.Y=5467.805mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 7.874mil) Between Board Edge And Track (1426.062mil,4865.67mil)(1426.062mil,5857.796mil) on Top Overlay </acronym></a><br>Waived by Evan Baesler at 11/11/2026 9:39:48 PM<br>LCD Hangs off-board.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2859.945mil|Location2.X=2866.195mil|Location1.Y=5854.671mil|Location2.Y=5860.921mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2859.945mil|Location2.X=2866.195mil|Location1.Y=5854.671mil|Location2.Y=5860.921mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 7.874mil) Between Board Edge And Track (1426.062mil,5857.796mil)(4300.078mil,5857.796mil) on Top Overlay </acronym></a><br>Waived by Evan Baesler at 11/11/2026 9:39:48 PM<br>LCD Hangs off-board.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1897.937mil|Location2.X=1904.187mil|Location1.Y=5358.608mil|Location2.Y=5364.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1897.937mil|Location2.X=1904.187mil|Location1.Y=5358.608mil|Location2.Y=5364.858mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 7.874mil) Between Board Edge And Track (1901.062mil,5157.796mil)(1901.062mil,5565.67mil) on Top Overlay </acronym></a><br>Waived by Evan Baesler at 11/11/2026 9:39:48 PM<br>LCD Hangs off-board.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2895.477mil|Location2.X=2901.727mil|Location1.Y=5154.671mil|Location2.Y=5160.921mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2895.477mil|Location2.X=2901.727mil|Location1.Y=5154.671mil|Location2.Y=5160.921mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 7.874mil) Between Board Edge And Track (1901.062mil,5157.796mil)(3896.142mil,5157.796mil) on Top Overlay </acronym></a><br>Waived by Evan Baesler at 11/11/2026 9:39:48 PM<br>LCD Hangs off-board.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2895.477mil|Location2.X=2901.727mil|Location1.Y=5562.545mil|Location2.Y=5568.795mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2895.477mil|Location2.X=2901.727mil|Location1.Y=5562.545mil|Location2.Y=5568.795mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 7.874mil) Between Board Edge And Track (1901.062mil,5565.67mil)(3896.142mil,5565.67mil) on Top Overlay </acronym></a><br>Waived by Evan Baesler at 11/11/2026 9:39:48 PM<br>LCD Hangs off-board.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3893.017mil|Location2.X=3899.267mil|Location1.Y=5358.608mil|Location2.Y=5364.858mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3893.017mil|Location2.X=3899.267mil|Location1.Y=5358.608mil|Location2.Y=5364.858mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 7.874mil) Between Board Edge And Track (3896.142mil,5157.796mil)(3896.142mil,5565.67mil) on Top Overlay </acronym></a><br>Waived by Evan Baesler at 11/11/2026 9:39:48 PM<br>LCD Hangs off-board.</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4296.953mil|Location2.X=4303.203mil|Location1.Y=5465.98mil|Location2.Y=5472.229mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4296.953mil|Location2.X=4303.203mil|Location1.Y=5465.98mil|Location2.Y=5472.229mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 7.874mil) Between Board Edge And Track (4300.078mil,4865.67mil)(4300.078mil,5857.796mil) on Top Overlay </acronym></a><br>Waived by Evan Baesler at 11/11/2026 9:39:48 PM<br>LCD Hangs off-board.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4491.835mil|Location2.X=4498.085mil|Location1.Y=5566.373mil|Location2.Y=5572.622mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4491.835mil|Location2.X=4498.085mil|Location1.Y=5566.373mil|Location2.Y=5572.622mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 7.874mil) Between Board Edge And Track (4494.96mil,4641.26mil)(4494.96mil,6058.582mil) on Top Overlay </acronym></a><br>Waived by Evan Baesler at 11/11/2026 9:39:48 PM<br>LCD Hangs off-board.</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

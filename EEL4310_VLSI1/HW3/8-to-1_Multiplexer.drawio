@@ -1,0 +1,125 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="Gc3vVrWdsFGbDM8WxMYh">
+    <mxGraphModel dx="323" dy="514" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="H6EEAwfrw6oahkzJE2uv-1" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="280" y="600" as="sourcePoint" />
+            <mxPoint x="280" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H6EEAwfrw6oahkzJE2uv-2" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="400" y="540" as="sourcePoint" />
+            <mxPoint x="400" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H6EEAwfrw6oahkzJE2uv-3" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="400" y="340" as="sourcePoint" />
+            <mxPoint x="280" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H6EEAwfrw6oahkzJE2uv-4" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="400" y="540" as="sourcePoint" />
+            <mxPoint x="280" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H6EEAwfrw6oahkzJE2uv-5" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;endFill=1;" value="IN3">
+          <mxGeometry height="50" relative="1" width="50" x="-0.5" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="240" y="380" as="sourcePoint" />
+            <mxPoint x="280" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H6EEAwfrw6oahkzJE2uv-6" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;endFill=1;" value="IN4">
+          <mxGeometry height="50" relative="1" width="50" x="-0.5" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="240" y="420" as="sourcePoint" />
+            <mxPoint x="280" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H6EEAwfrw6oahkzJE2uv-8" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;endFill=1;" value="IN5">
+          <mxGeometry height="50" relative="1" width="50" x="-0.5" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="240" y="460" as="sourcePoint" />
+            <mxPoint x="280" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H6EEAwfrw6oahkzJE2uv-9" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;endFill=1;" value="IN6">
+          <mxGeometry height="50" relative="1" width="50" x="-0.5" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="240" y="500" as="sourcePoint" />
+            <mxPoint x="280" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H6EEAwfrw6oahkzJE2uv-10" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;endFill=1;" value="IN8">
+          <mxGeometry height="50" relative="1" width="50" x="-0.5" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="240" y="580" as="sourcePoint" />
+            <mxPoint x="280" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H6EEAwfrw6oahkzJE2uv-11" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;endFill=1;" value="IN7">
+          <mxGeometry height="50" relative="1" width="50" x="-0.5" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="240" y="540" as="sourcePoint" />
+            <mxPoint x="280" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H6EEAwfrw6oahkzJE2uv-12" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;endFill=1;" value="IN2">
+          <mxGeometry height="50" relative="1" width="50" x="-0.5" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="240" y="340" as="sourcePoint" />
+            <mxPoint x="280" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H6EEAwfrw6oahkzJE2uv-13" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;endFill=1;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="240" y="300" as="sourcePoint" />
+            <mxPoint x="280" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H6EEAwfrw6oahkzJE2uv-18" connectable="0" parent="H6EEAwfrw6oahkzJE2uv-13" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="IN1" vertex="1">
+          <mxGeometry relative="1" x="-0.5425" y="-1" as="geometry">
+            <mxPoint y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H6EEAwfrw6oahkzJE2uv-14" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;endFill=1;" value="OUT">
+          <mxGeometry height="50" relative="1" width="50" x="1" y="10" as="geometry">
+            <mxPoint x="10" y="10" as="offset" />
+            <mxPoint x="400" y="440" as="sourcePoint" />
+            <mxPoint x="440" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H6EEAwfrw6oahkzJE2uv-15" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;" value="S2">
+          <mxGeometry height="50" relative="1" width="50" x="-1" y="-10" as="geometry">
+            <mxPoint x="-10" y="10" as="offset" />
+            <mxPoint x="300" y="610" as="sourcePoint" />
+            <mxPoint x="300" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H6EEAwfrw6oahkzJE2uv-16" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;" value="S1">
+          <mxGeometry height="50" relative="1" width="50" x="-1" y="-10" as="geometry">
+            <mxPoint x="-10" y="10" as="offset" />
+            <mxPoint x="340" y="610" as="sourcePoint" />
+            <mxPoint x="340" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H6EEAwfrw6oahkzJE2uv-17" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;defaultLabelBackgroundColor=page;" value="S0">
+          <mxGeometry height="50" relative="1" width="50" x="-1" y="-10" as="geometry">
+            <mxPoint x="-10" y="10" as="offset" />
+            <mxPoint x="380" y="610" as="sourcePoint" />
+            <mxPoint x="380" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="H6EEAwfrw6oahkzJE2uv-19" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="8:1 MUX" vertex="1">
+          <mxGeometry height="30" width="60" x="310" y="420" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

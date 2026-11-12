@@ -359,6 +359,10 @@ DItemRevisionGUID=
 DocumentPath=Project Outputs for AlarmClock\AlarmClock.REP
 DItemRevisionGUID=
 
+[GeneratedDocument19]
+DocumentPath=Project Outputs for AlarmClock\Design Rule Check - AlarmClock.html
+DItemRevisionGUID=
+
 [Configuration1]
 Name=Sources
 ParameterCount=0

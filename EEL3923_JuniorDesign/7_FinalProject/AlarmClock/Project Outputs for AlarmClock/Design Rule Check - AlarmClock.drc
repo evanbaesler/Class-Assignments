@@ -1,0 +1,91 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\Mariachi\Documents\GitHub\Class-Assignments\EEL3923_JuniorDesign\7_FinalProject\AlarmClock\AlarmClock.PcbDoc
+Date     : 11/11/2026
+Time     : 9:40:21 PM
+
+Processing Rule : Clearance Constraint (Gap=4mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=15mil) (Max=35mil) (Preferred=20mil) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=6mil) (Max=40mil) (Preferred=10mil) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=30mil) (Max=30mil) (Preferred=30mil) (InNet('+9V'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=15mil) (Max=24mil) (Preferred=20mil) (InNetClass('Regulated Power'))
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=8mil) (Max=12mil) (Preferred=10mil) (InNetClass('Communications'))
+Rule Violations :0
+
+Processing Rule : Routing Topology Rule(Topology=Shortest) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=11.811mil) (Conductor Width=4mil) (Air Gap=4mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (InPadClass('PowerPads'))
+Rule Violations :0
+
+Processing Rule : Minimum Annular Ring (Minimum=3mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=7.874mil) (Max=248.031mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=9.842mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=4mil) (IsPad),(All)
+   Violation between Silk To Solder Mask Clearance Constraint: (2.485mil < 4mil) Between Pad R6-1(3510mil,2085mil) on Multi-Layer And Track (3420mil,2045mil)(3800mil,2045mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [2.485mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (2.485mil < 4mil) Between Pad R6-3(3710mil,2085mil) on Multi-Layer And Track (3420mil,2045mil)(3800mil,2045mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [2.485mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (2.485mil < 4mil) Between Pad R7-1(2680mil,4240mil) on Multi-Layer And Track (2590mil,4200mil)(2970mil,4200mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [2.485mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (2.485mil < 4mil) Between Pad R7-3(2880mil,4240mil) on Multi-Layer And Track (2590mil,4200mil)(2970mil,4200mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [2.485mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (2.485mil < 4mil) Between Pad R8-1(3885mil,4245mil) on Multi-Layer And Track (3795mil,4205mil)(4175mil,4205mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [2.485mil]
+   Violation between Silk To Solder Mask Clearance Constraint: (2.485mil < 4mil) Between Pad R8-3(4085mil,4245mil) on Multi-Layer And Track (3795mil,4205mil)(4175mil,4205mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [2.485mil]
+Rule Violations :6
+
+Processing Rule : Silk to Silk (Clearance=0mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=71497.938mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+Waived Violations Of Rule : Board Clearance Constraint (Gap=0mil) (All)
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 7.874mil) Between Board Edge And Track (1345.354mil,4641.26mil)(1345.354mil,6058.582mil) on Top Overlay Waived by Evan Baesler at 11/11/2026 9:39:48 PMLCD Hangs off-board.
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 7.874mil) Between Board Edge And Track (1345.354mil,6058.582mil)(4494.96mil,6058.582mil) on Top Overlay Waived by Evan Baesler at 11/11/2026 9:39:48 PMLCD Hangs off-board.
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 7.874mil) Between Board Edge And Track (1426.062mil,4865.67mil)(1426.062mil,5857.796mil) on Top Overlay Waived by Evan Baesler at 11/11/2026 9:39:48 PMLCD Hangs off-board.
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 7.874mil) Between Board Edge And Track (1426.062mil,5857.796mil)(4300.078mil,5857.796mil) on Top Overlay Waived by Evan Baesler at 11/11/2026 9:39:48 PMLCD Hangs off-board.
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 7.874mil) Between Board Edge And Track (1901.062mil,5157.796mil)(1901.062mil,5565.67mil) on Top Overlay Waived by Evan Baesler at 11/11/2026 9:39:48 PMLCD Hangs off-board.
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 7.874mil) Between Board Edge And Track (1901.062mil,5157.796mil)(3896.142mil,5157.796mil) on Top Overlay Waived by Evan Baesler at 11/11/2026 9:39:48 PMLCD Hangs off-board.
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 7.874mil) Between Board Edge And Track (1901.062mil,5565.67mil)(3896.142mil,5565.67mil) on Top Overlay Waived by Evan Baesler at 11/11/2026 9:39:48 PMLCD Hangs off-board.
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 7.874mil) Between Board Edge And Track (3896.142mil,5157.796mil)(3896.142mil,5565.67mil) on Top Overlay Waived by Evan Baesler at 11/11/2026 9:39:48 PMLCD Hangs off-board.
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 7.874mil) Between Board Edge And Track (4300.078mil,4865.67mil)(4300.078mil,5857.796mil) on Top Overlay Waived by Evan Baesler at 11/11/2026 9:39:48 PMLCD Hangs off-board.
+   Waived Violation between Board Outline Clearance(Outline Edge): (Collision < 7.874mil) Between Board Edge And Track (4494.96mil,4641.26mil)(4494.96mil,6058.582mil) on Top Overlay Waived by Evan Baesler at 11/11/2026 9:39:48 PMLCD Hangs off-board.
+Waived Violations :10
+
+
+Violations Detected : 6
+Waived Violations : 10
+Time Elapsed        : 00:00:00
